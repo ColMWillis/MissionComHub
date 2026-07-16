@@ -1,0 +1,5 @@
+CERN Open Hardware Licence Version 2 - Permissive
+
+This repository is intended to use CERN-OHL-P-2.0 for hardware design files and documentation. Before public release of design files, replace this notice with the complete official CERN-OHL-P-2.0 license text from the CERN Open Hardware Licence source.
+
+Software added under Firmware/ should carry a separate MIT license file or file-level notice.
