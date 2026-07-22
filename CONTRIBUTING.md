@@ -12,7 +12,7 @@
 
 Prototype printed parts shall include an internal revision marking, for example:
 
-`MCH-MK1 REV 0.1 PROTOTYPE`
+`MCH-MK1 R0.5 PROTOTYPE`
 
 ## CAD exports
 
@@ -24,5 +24,7 @@ Each released mechanical revision should include:
 - PrusaSlicer 3MF
 - Dimensioned PDF drawing
 - Changelog entry
+
+Generated exports must also pass the repository validation script, and physical coupon feedback must be recorded before changing a fit-tested dimension.
 
 Binary exports should match the same source-model commit.

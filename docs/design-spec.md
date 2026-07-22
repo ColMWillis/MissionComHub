@@ -1,190 +1,105 @@
-# Mechanical Design Specification
+# Mechanical Design Specification — Mk I R0.5
 
-## 1. Identification
+## Identification and scope
 
-- Product name: Mission Communications Hub
-- Mark: Mk I
-- Organization mark: GAWG CAP
-- Project repository: `ColMWillis/MissionComHub`
-- Design stage: Milestone 1 mechanical prototype
+- Product: Mission Communications Hub
+- Marking: `Mission Communications Hub / Mk I / GAWG CAP`
+- Revision: R0.5 prototype
+- Function: portable power-interface enclosure for Peplink MAX BR1 Pro 5G and Starlink Mini
+- External source: Anker SOLIX C200 DC or equivalent USB-C PD source
 
-## 2. Intended use
+The enclosure does not contain the Peplink, Starlink Mini, iPad, battery, or certified avionics. The Starlink Mini remains external so it can be positioned at a window. An iPad may be powered directly from an available battery port and is not assigned a dedicated R0.5 enclosure connector.
 
-The Mk I enclosure shall provide a portable, serviceable housing for 12 VDC power conversion and distribution supporting a Peplink MAX BR1 Pro 5G and future communications accessories. The enclosure is intended for temporary use in CAP aircraft, ground vehicles, and mission bases.
+## Envelope and construction
 
-## 3. Governing design principles
+| Feature | R0.5 value |
+|---|---:|
+| Body envelope | 140 × 90 × 52 mm |
+| Wall thickness | 3.0 mm |
+| Bottom thickness | 3.2 mm |
+| External corner radius | 6.0 mm |
+| Lid plate | 4.0 mm |
+| Lid locating-lip depth | 3.5 mm |
+| Lid clearance | 0.35 mm per side |
+| Lid fasteners | Four M3 positions |
 
-1. No exposed energized conductors during normal use.
-2. All field connections shall be polarized and replaceable.
-3. The enclosure shall be serviceable using common hand tools.
-4. Panel modules shall be replaceable without reprinting the main body when practical.
-5. The design shall tolerate transport in a flight bag and elevated cockpit temperatures.
-6. Printed parts shall avoid support material where practical.
-7. Mechanical provisions shall support future electronics without forcing immediate installation.
+The body and lid are separate, serviceable printed parts. R0.3 corrected the inherited locating-lip interference and added clearance pockets around the body’s corner bosses. Automated assembly checking reports 0 mm³ body/lid interference.
 
-## 4. Baseline envelope
+## Control face
 
-Target external envelope:
+- Power switch nominal body: 38.10 × 20.32 mm
+- Switch cutout: 38.55 × 20.77 mm
+- Voltmeter nominal supplied size: 45.72 × 27.94 mm
+- Fit-tested R0.5 voltmeter cutout: 45.17 × 26.39 mm
 
-- Width: 210 mm nominal
-- Depth: 145 mm nominal
-- Height: 60 mm nominal, excluding feet and protruding controls
-- Corner radius: 8–12 mm exterior
-- Wall thickness: 3.0 mm nominal
-- Lid overlap: at least 8 mm
-- Lid-to-body labyrinth or tongue-and-groove joint: required
+The voltmeter opening evolved through physical coupon testing:
 
-The CAD model shall remain parametric. Dimensions may change after component measurement, but the external envelope should remain under 220 × 155 × 70 mm.
+- R0.3: 46.17 × 28.39 mm — retained but rattled
+- R0.4: 44.17 × 26.39 mm — correct vertically, tight horizontally
+- R0.5: 45.17 × 26.39 mm — adds 0.50 mm on each side
 
-## 5. Material and printing
+## I/O face
 
-Primary material: PETG-CF compatible with a Prusa CORE One.
+Two AAOTOKK USB-C panel-mount positions are labeled `BATTERY` and `STARLINK`.
 
-Recommended prototype settings:
+| Feature | Dimension |
+|---|---:|
+| Flange | 33.0 × 25.0 mm |
+| Flush recess | 33.4 × 25.4 × 0.8 mm deep |
+| Connector aperture | 11.0 × 6.0 mm |
+| Screw centers | 25.0 mm |
+| Screw clearance | 2.8 mm diameter |
 
-- Nozzle: hardened 0.4 or 0.6 mm
-- Layer height: 0.20 mm
-- Perimeters: 5
-- Top/bottom solid layers: 6
-- Infill: 30% gyroid
-- Brim: as required by the selected PETG-CF
-- Supports: none preferred; build plate only where unavoidable
-- Insert installation: temperature-controlled heat-set tip
+The `PEPLINK` exit is designed around a measured bonded red/black 20 AWG pair:
 
-The final 3MF shall include separate objects and recommended orientations rather than merging all components.
+- Cable: 3.81 × 2.03 mm
+- Body exit: 4.35 × 2.65 mm
+- Strain-relief channel: 4.05 × 2.20 mm
+- Clamp: 18 × 10 × 3.6 mm with two M3 positions
 
-## 6. Enclosure architecture
+## Internal geometry
 
-The enclosure shall consist of:
+- Blue Sea Systems 5045 reserved envelope: 92.5 × 43.8 mm
+- Mounting-boss centers: 65.1 mm
+- Boss pilot holes: 3.6 mm; final M4 fastening method must be physically verified
+- Two universal PD-board cradles based on 17.78 × 43.18 mm boards
+- Additional solder-joint allowance: 2.54 mm
+- Raised routing rails and four zip-tie tabs keep service loops away from fuse terminals
 
-1. Main lower body
-2. Removable lid
-3. Internal electronics sled
-4. Replaceable front I/O panel
-5. Replaceable rear I/O panel
-6. Cable-retention clips or clamps
-7. Optional feet and AMPS mounting adapter
+## Material and printing
 
-The sled shall lift out after removal of no more than four screws. The body shall not require removal of panel connectors to extract the sled unless wiring harness disconnects are provided.
+- Printer target: Prusa CORE One
+- Material: PETG-CF
+- Hardened 0.4 mm nozzle
+- 0.20 mm layer height
+- 4 perimeters
+- 5 top and bottom layers
+- 25–35% gyroid infill
 
-## 7. Fasteners
+Print fit coupons first. The body is printed upright. The raised branding complicates the lid orientation: printing branding-up requires support beneath the broad center panel; a long-edge orientation with a brim may also be tested.
 
-- Primary enclosure fasteners: M3 stainless socket-head screws
-- Thread interface: M3 brass heat-set inserts
-- Minimum lid fasteners: six, with eight preferred
-- Inserts shall not be installed closer than 2.0 mm to an exterior wall
-- Captive screw geometry is preferred where reliable in PETG-CF
-- Self-tapping screws are prohibited for service points
+## Branding
 
-## 8. Branding
+The lid carries centered raised text:
 
-The lid shall carry the following centered text:
-
+```text
 Mission Communications Hub
 Mk I
 GAWG CAP
+```
 
-Branding shall be recessed 0.5–0.8 mm or raised no more than 0.6 mm. Letter geometry must be printable with a 0.4 mm nozzle. A multi-material color change may be supported, but the base design shall remain legible in a single material.
+No CAP seal or insignia is included.
 
-No CAP seal or insignia is included in the baseline model.
+## Validation
 
-## 9. External interfaces
+R0.5 passed automated checks for:
 
-### 9.1 Required for Mk I
+- watertight STL and 3MF meshes
+- consistent mesh winding and positive volume
+- millimeter-unit 3MF package structure
+- matching STL and 3MF extents
+- successful STEP solid re-import
+- exact 140 × 90 × 52 mm body envelope
+- zero body/lid intersection when assembled
 
-- One USB-C PD input opening or panel module
-- Four Anderson Powerpole output positions
-- One master power switch opening
-- One round or rectangular voltage display opening
-- Accessible fuse replacement without complete enclosure disassembly, if feasible
-
-### 9.2 Reserved
-
-- Two RJ45 keystone positions
-- One USB-C auxiliary output
-- Two covered SMA-sized knockouts
-- One status display position
-
-Reserved openings shall use replaceable blanking plates rather than open holes.
-
-## 10. Connector labeling
-
-Required Powerpole labels:
-
-- PEPLINK
-- STARLINK
-- AUX 1
-- AUX 2
-
-Other required labels:
-
-- USB-C PD IN
-- MASTER
-- 12 VDC OUTPUTS
-
-Labels shall be recessed or raised and shall not rely solely on adhesive labels.
-
-## 11. Internal layout zones
-
-The mechanical model shall reserve zones for:
-
-- USB-C PD trigger or converter module: 45 × 35 × 18 mm minimum
-- Four-circuit fuse block: 110 × 50 × 40 mm target reserve
-- Power distribution and wiring bend radius
-- Optional 5-port Ethernet switch: 105 × 65 × 30 mm reserve
-- Optional embedded controller: 90 × 65 × 25 mm reserve
-- Cable service loops and strain relief
-
-No module dimensions are final until physical components are purchased and measured.
-
-## 12. Thermal design
-
-The enclosure shall provide passive ventilation without creating direct access to wiring.
-
-- Intake area: lower side or bottom, minimum 600 mm² aggregate
-- Exhaust area: upper rear or opposite side, minimum 600 mm² aggregate
-- Vent slots: 2.0–2.5 mm nominal width with internal finger guard or offset geometry
-- Airflow path shall cross the conversion module and not be blocked by the sled
-
-The enclosure is not weatherproof. Ventilation openings shall be positioned to reduce direct liquid entry during normal upright use.
-
-## 13. Mounting and restraint
-
-The base shall include:
-
-- AMPS four-hole pattern: 30 × 38 mm
-- M4 insert option or through-hole option on a removable adapter plate
-- Four non-slip foot positions
-- Two external strap channels suitable for a 25 mm retention strap
-
-The design shall not assume permanent aircraft installation.
-
-## 14. Cable management
-
-- Minimum internal wire bend radius: 4× cable outside diameter
-- Main bus wiring channels: 8 mm minimum clear width
-- Cable tie points: integrated every 40–60 mm along primary routes
-- USB-C input: positive retention clamp required
-- All panel wiring: strain-relieved independently of solder joints or screw terminals
-
-## 15. Manufacturing tolerances
-
-Initial PETG-CF allowances:
-
-- Sliding panel clearance: 0.30 mm per side
-- Lid fit clearance: 0.25–0.35 mm per side
-- Heat-set insert pilot dimensions: manufacturer-specific test coupon required
-- Circular panel cutouts: nominal component diameter +0.30 mm
-- Snap features: prohibited until validated by coupon testing
-
-## 16. Prototype verification gates
-
-Before a full enclosure print:
-
-1. Print connector-panel coupon.
-2. Verify all panel cutouts with actual parts.
-3. Print lid-joint corner coupon.
-4. Verify heat-set insert fit and pull-out resistance.
-5. Print 20 mm-high body section to check warping and dimensions.
-
-The first complete print shall be marked `REV 0.1 PROTOTYPE` internally.
+Automated validation does not replace physical fit, load, thermal, vibration, restraint, or electrical testing.

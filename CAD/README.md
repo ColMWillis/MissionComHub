@@ -1,12 +1,23 @@
-# CAD Directory
+# CAD Files
 
-The parametric master model will be maintained in `Fusion360/` or another agreed native CAD format.
+The parametric source of truth is [`CadQuery/make_mch_mk1_r05.py`](CadQuery/make_mch_mk1_r05.py).
 
-Release exports:
+R0.5 exports are organized by format:
 
-- `STEP/` neutral editable geometry
-- `STL/` individual print meshes
-- `3MF/` PrusaSlicer project with named objects and print settings
-- `Drawings/` dimensioned drawings and panel templates
+- [`3MF/R0.5`](3MF/R0.5) — print meshes in millimeter units
+- [`STL/R0.5`](STL/R0.5) — triangulated print meshes
+- [`STEP/R0.5`](STEP/R0.5) — neutral editable solids for Fusion and other CAD tools
+- [`Releases/R0.5`](Releases/R0.5) — README, dimensions, checksums, and validation results
 
-No CAD geometry in this baseline is approved for printing. Component selections and measurements must be completed first.
+All three export formats were generated from the same CadQuery source. The complete packaged release is under [`../releases/R0.5`](../releases/R0.5).
+
+## R0.5 printable objects
+
+1. Main enclosure body
+2. Branded locating-lip lid
+3. Peplink bonded-cable strain-relief clamp
+4. Control fit coupon
+5. AAOTOKK USB-C fit coupon
+6. Peplink wire-exit fit coupon
+
+Do not alter a mesh export without updating the parametric source and regenerating every synchronized format.

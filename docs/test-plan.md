@@ -1,23 +1,58 @@
-# Mechanical Prototype Test Plan
+# Mk I R0.5 Prototype Test Plan
 
-| Test ID | Requirement | Method | Pass criterion |
+## Automated release validation
+
+| Test ID | Method | Pass criterion | R0.5 |
 |---|---|---|---|
-| T-M-001 | MCH-M-001 | Measure complete enclosure | At or below 220 × 155 × 70 mm |
-| T-M-002 | MCH-M-003 | Cycle lid screws 20 times | No stripped insert, cracking, or loss of retention |
-| T-M-003 | MCH-M-004 | Remove/install sled 10 times | No interference or damage |
-| T-M-004 | MCH-M-007 | Fit 25 mm strap | Strap passes and restrains unit without edge damage |
-| T-P-001 | MCH-P-001 | Slice all parts | No part exceeds CORE One build volume |
-| T-P-002 | MCH-P-003 | Review slicer preview | No inaccessible support material |
-| T-I-001 | MCH-I-001 | Fit four Powerpole interfaces | All seat fully and remain aligned |
-| T-S-001 | MCH-S-001 | IEC-style finger probe inspection | No accessible internal conductor path |
-| T-S-002 | MCH-S-002 | 20 N pull test | USB-C retention remains intact |
-| T-B-001 | MCH-B-001–003 | Visual inspection | Exact three branding lines present and legible |
+| T-A-001 | Inspect every STL and 3MF mesh | Watertight, consistent winding, positive volume | Pass |
+| T-A-002 | Compare matching STL and 3MF extents | Agreement within 0.02 mm | Pass |
+| T-A-003 | Inspect 3MF package | Valid structure; millimeter units | Pass |
+| T-A-004 | Re-import each STEP | At least one valid positive-volume solid | Pass |
+| T-A-005 | Measure body mesh | 140 × 90 × 52 mm within 0.02 mm | Pass |
+| T-A-006 | Intersect assembled body and lid STEP solids | No interference above 0.05 mm³ | Pass: 0 mm³ |
+| T-A-007 | Read dimensions manifest | Voltmeter opening equals 45.17 × 26.39 mm | Pass |
 
-## Environmental screening for later revision
+Detailed values are in `CAD/Releases/R0.5/VALIDATION.md` and `validation_report.json`.
 
-The following are deferred until a complete non-energized prototype exists:
+## Physical fit tests
 
-- Hot-soak dimensional stability
-- Vehicle vibration screening
-- Drop screening in a padded transport configuration
-- Sunlight and label-legibility evaluation
+| Test ID | Method | Pass criterion |
+|---|---|---|
+| T-F-001 | Fit switch in control coupon | Fully retained; no coupon distortion |
+| T-F-002 | Fit voltmeter in R0.5 control coupon | Seats without rattle or excessive insertion force |
+| T-F-003 | Fit AAOTOKK connector | Flange seats in recess; screws and aperture align |
+| T-F-004 | Fit Peplink cable in selected coupon slot | Passes without insulation damage |
+| T-F-005 | Tighten cable clamp | Cable resists a gentle pull without visible crushing |
+| T-F-006 | Fit Blue Sea 5045 | Both mounting points align at 65.1 mm centers |
+
+## Mechanical prototype tests
+
+| Test ID | Method | Pass criterion |
+|---|---|---|
+| T-M-001 | Measure printed body | Within printer-calibrated tolerance of 140 × 90 × 52 mm |
+| T-M-002 | Cycle lid screws 20 times | No stripped insert, crack, or loss of retention |
+| T-M-003 | Open and close lid 20 times | Lip remains self-aligning without binding |
+| T-M-004 | Shake non-energized assembled enclosure by hand | No loose hardware or component movement |
+| T-M-005 | Inspect cable routes with lid installed | No wire contacts screw tips or sharp edges |
+| T-B-001 | Inspect lid | All three branding lines are legible and centered |
+
+## Electrical and thermal tests
+
+These require a completed documented harness and are not satisfied by CAD validation.
+
+| Test ID | Method | Pass criterion |
+|---|---|---|
+| T-E-001 | Continuity and polarity inspection before power | No short; every output polarity correct |
+| T-E-002 | Peplink-only test | Stable boot and operation; no abnormal heat |
+| T-E-003 | Starlink-only test | Stable boot and operation; no abnormal heat |
+| T-E-004 | Combined maximum intended load for 30 minutes | No reset, odor, discoloration, hot cable, or unsafe temperature |
+| T-E-005 | Verify fuse behavior using a safe test method | Correct branch interruption without harness damage |
+
+## Deferred operational screening
+
+- hot-soak dimensional stability
+- vibration and connector-retention screening
+- padded-transport drop screening
+- sunlight and cockpit-temperature exposure
+- restraint evaluation in each proposed aircraft or vehicle
+- CAP and aircraft-owner operational approval

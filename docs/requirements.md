@@ -1,55 +1,62 @@
-# Mk I Requirements
+# Mk I R0.5 Requirements
 
-Requirement identifiers are stable and should be referenced in issues, commits, drawings, and test records.
+Requirement identifiers remain stable. Retired conceptual requirements are preserved and not reassigned.
 
 ## Mechanical
 
-- MCH-M-001: The enclosure shall fit within 220 × 155 × 70 mm.
-- MCH-M-002: The enclosure shall use a separate body and removable lid.
-- MCH-M-003: Service interfaces shall use machine screws and heat-set inserts.
-- MCH-M-004: The internal electronics shall mount to a removable sled.
-- MCH-M-005: The design shall include replaceable front and rear panel modules.
-- MCH-M-006: The base shall include an AMPS-compatible mounting pattern.
-- MCH-M-007: The enclosure shall include two 25 mm restraint-strap paths.
-- MCH-M-008: The enclosure shall have no sharp external edges or corners.
-- MCH-M-009: Normal service shall not require destructive removal of printed parts.
+- MCH-M-001: The body shall measure 140 × 90 × 52 mm.
+- MCH-M-002: The enclosure shall use a separate body and removable locating-lip lid.
+- MCH-M-003: Lid service points shall use M3 machine-screw positions suitable for inserts.
+- MCH-M-004: **Retired** — removable electronics sled.
+- MCH-M-005: **Retired** — replaceable front and rear panels.
+- MCH-M-006: **Deferred** — AMPS mounting pattern.
+- MCH-M-007: **Deferred** — integrated 25 mm strap paths.
+- MCH-M-008: The enclosure shall have rounded external corners and no sharp cable-contact edges.
+- MCH-M-009: Normal lid and strain-relief service shall not require destructive removal of printed parts.
+- MCH-M-010: Blue Sea 5045 bosses shall use 65.1 mm mounting centers.
+- MCH-M-011: The Peplink exit and clamp shall accommodate a 3.81 × 2.03 mm bonded cable without intentional crushing.
+- MCH-M-012: Internal routing features shall retain wiring away from fuse terminals and lid screws.
 
-## Printing
+## Printing and release
 
-- MCH-P-001: All primary parts shall fit the Prusa CORE One build volume.
-- MCH-P-002: Primary parts shall be printable in PETG-CF.
-- MCH-P-003: The design shall minimize supports and avoid supports inside inaccessible cavities.
-- MCH-P-004: Final release files shall include STL and 3MF formats.
-- MCH-P-005: The 3MF shall preserve object names, orientations, and recommended print settings.
+- MCH-P-001: Every primary printed part shall fit the Prusa CORE One build volume.
+- MCH-P-002: Primary parts shall be printable in PETG-CF with a hardened 0.4 mm nozzle.
+- MCH-P-003: No inaccessible support material shall be required.
+- MCH-P-004: Each release shall include STEP, STL, and 3MF files generated from one parametric source.
+- MCH-P-005: Every 3MF shall declare millimeter units and match its corresponding STL dimensions.
+- MCH-P-006: Control, USB-C, and wire-exit fit coupons shall be supplied.
 
 ## Interfaces
 
-- MCH-I-001: The Mk I shall provide four Anderson Powerpole output positions.
-- MCH-I-002: The four outputs shall be labeled PEPLINK, STARLINK, AUX 1, and AUX 2.
-- MCH-I-003: The Mk I shall provide one USB-C PD input position.
-- MCH-I-004: The Mk I shall provide one master switch position.
-- MCH-I-005: The Mk I shall provide one voltage-display position.
-- MCH-I-006: Unused expansion interfaces shall be covered by replaceable blanking plates.
+- MCH-I-001: **Retired** — four Anderson Powerpole output positions.
+- MCH-I-002: **Retired** — PEPLINK/STARLINK/AUX 1/AUX 2 Powerpole labels.
+- MCH-I-003: The enclosure shall provide one AAOTOKK USB-C panel position labeled `BATTERY`.
+- MCH-I-004: The enclosure shall provide one master-switch opening.
+- MCH-I-005: The enclosure shall provide one fit-tested voltage-display opening.
+- MCH-I-006: **Retired** — expansion blanking plates.
+- MCH-I-007: The enclosure shall provide one AAOTOKK USB-C panel position labeled `STARLINK`.
+- MCH-I-008: The enclosure shall provide one bonded-cable exit labeled `PEPLINK`.
 
 ## Branding
 
-- MCH-B-001: The lid shall display “Mission Communications Hub”.
-- MCH-B-002: The lid shall display “Mk I”.
-- MCH-B-003: The lid shall display “GAWG CAP”.
+- MCH-B-001: The lid shall display `Mission Communications Hub`.
+- MCH-B-002: The lid shall display `Mk I`.
+- MCH-B-003: The lid shall display `GAWG CAP`.
 - MCH-B-004: Branding shall remain legible in a single-color print.
 
 ## Safety and serviceability
 
-- MCH-S-001: No energized conductor shall be finger-accessible during normal use.
-- MCH-S-002: The USB-C input cable shall have mechanical strain relief.
-- MCH-S-003: Output connectors shall be polarized.
-- MCH-S-004: Each output shall support individual overcurrent protection.
-- MCH-S-005: Internal wiring shall be retained away from lid fasteners and ventilation openings.
-- MCH-S-006: The enclosure shall carry an internal prototype/revision identifier.
+- MCH-S-001: No energized conductor shall be finger-accessible with the lid installed.
+- MCH-S-002: External cable loads shall be transferred to panel hardware or strain relief rather than solder joints.
+- MCH-S-003: The Peplink bonded cable shall use the printed two-screw strain-relief clamp.
+- MCH-S-004: Circuit protection, wire sizing, and component ratings shall be verified before energized operation.
+- MCH-S-005: Internal wiring shall be retained away from lid fasteners and fuse terminals.
+- MCH-S-006: This prototype shall not be represented as certified avionics.
 
 ## Documentation
 
 - MCH-D-001: Each release shall include a BOM.
-- MCH-D-002: Each release shall include assembly instructions.
-- MCH-D-003: Each release shall include a dimensional drawing.
-- MCH-D-004: Each release shall state known limitations and unverified component fits.
+- MCH-D-002: Each release shall include assembly guidance.
+- MCH-D-003: Each release shall include a dimensions manifest.
+- MCH-D-004: Each release shall include automated validation results and checksums.
+- MCH-D-005: Physical coupon-fit feedback shall be recorded in the changelog.

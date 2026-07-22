@@ -1,0 +1,100 @@
+{
+  "revision": "R0.5",
+  "files": {
+    "MCH-MkI_AAOTOKK_USB-C_fit_coupon_R0.5": {
+      "faces": 1760,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        76.0,
+        34.0,
+        3.2
+      ],
+      "mesh_volume_mm3": 7434.33,
+      "step_solids": 1,
+      "step_volume_mm3": 7434.28,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    },
+    "MCH-MkI_body_R0.5": {
+      "faces": 20624,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        140.0,
+        90.0,
+        52.0
+      ],
+      "mesh_volume_mm3": 117472.58,
+      "step_solids": 1,
+      "step_volume_mm3": 117482.17,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    },
+    "MCH-MkI_control_fit_coupon_R0.5": {
+      "faces": 484,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        105.0,
+        42.0,
+        3.2
+      ],
+      "mesh_volume_mm3": 7710.52,
+      "step_solids": 1,
+      "step_volume_mm3": 7710.57,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    },
+    "MCH-MkI_lid_R0.5": {
+      "faces": 28908,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        140.0,
+        90.0,
+        8.3
+      ],
+      "mesh_volume_mm3": 53046.4,
+      "step_solids": 1,
+      "step_volume_mm3": 53046.44,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    },
+    "MCH-MkI_peplink_strain_relief_R0.5": {
+      "faces": 1192,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        18.0,
+        10.0,
+        3.6
+      ],
+      "mesh_volume_mm3": 528.6,
+      "step_solids": 1,
+      "step_volume_mm3": 528.54,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    },
+    "MCH-MkI_wire_exit_fit_coupon_R0.5": {
+      "faces": 1800,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        60.0,
+        25.0,
+        3.2
+      ],
+      "mesh_volume_mm3": 4676.64,
+      "step_solids": 1,
+      "step_volume_mm3": 4676.67,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    }
+  },
+  "voltmeter_cutout_mm": [
+    45.17,
+    26.39
+  ],
+  "assembled_body_lid_interference_mm3": 0.0
+}
