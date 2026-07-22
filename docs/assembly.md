@@ -1,14 +1,16 @@
-# Assembly Guide — Mk I R0.6 Prototype
+# Assembly Guide — Mk I R0.7 Prototype
 
 ## 1. Print and verify coupons
 
 Use the intended PETG-CF profile for all coupons.
 
-1. Print `MCH-MkI_control_fit_coupon_R0.6.3mf` if the verified control dimensions need reconfirmation on a different printer profile.
+1. Print `MCH-MkI_control_fit_coupon_R0.7.3mf` if the verified control dimensions need reconfirmation on a different printer profile.
 2. Confirm the switch snaps or seats without distorting the coupon.
 3. Confirm the voltmeter fits the 45.17 × 26.39 mm opening without rattle or excessive force.
 4. Print the AAOTOKK USB-C coupon and verify the flange recess, central opening, and both screw positions.
 5. The R0.6 body uses the physically verified 4.10 × 2.40 mm Peplink opening. Confirm it again if the printer profile changes.
+6. Print the Blue Sea 5045 fused-block coupon and verify both risers at 65.1 mm centers.
+7. Print the provisional unfused-busbar coupon and record where its mounting holes fall within the elongated slots. Do not drill or add body bosses from this coupon until the component's enclosure orientation is resolved.
 
 Do not print the complete body until these fits are accepted.
 
@@ -37,6 +39,7 @@ Allow inserts to cool before installing screws.
 5. Place the Blue Sea 5045 on its 65.1 mm mounting centers.
 6. Trial-fit PD modules in the universal cradles.
 7. Route dummy cable through the rails and tie-downs to confirm service-loop clearance.
+8. Do not install the unfused busbar in the R0.7 body: its 137.16 mm cover is longer than the 134 mm interior.
 
 ## 5. Lid fit
 

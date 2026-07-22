@@ -2,7 +2,24 @@
 
 ## [Unreleased]
 
-- Physical fit testing and electrical integration of the R0.6 prototype.
+- Physical fit testing of the R0.7 USB-C and power-block coupons.
+
+## [R0.7] — 2026-07-22
+
+### Changed
+
+- Corrected the outside-reading orientation of the `BATTERY`, `STARLINK`, and `PEPLINK` body labels.
+- Added `VOLTAGE` and `POWER` labels to the outside control face.
+- Preserved the verified control openings, 4.10 × 2.40 mm Peplink exit, and 4.55 × 2.70 mm strain-relief channel.
+
+### Added
+
+- Blue Sea 5045 fused-block riser coupon using the documented 65.1 mm mounting centers.
+- Provisional full-envelope coupon for the supplied 137.16 × 38.10 × 22.86 mm unfused busbar.
+
+### Hold point
+
+- The unfused busbar cover is 3.16 mm longer than the enclosure's 134 mm internal length. Its body mounting remains deferred until the physical component and final orientation are verified.
 
 ## [R0.6] — 2026-07-22
 

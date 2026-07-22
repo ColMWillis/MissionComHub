@@ -1,4 +1,4 @@
-# Mk I R0.6 Requirements
+# Mk I R0.7 Requirements
 
 Requirement identifiers remain stable. Retired conceptual requirements are preserved and not reassigned.
 
@@ -17,6 +17,8 @@ Requirement identifiers remain stable. Retired conceptual requirements are prese
 - MCH-M-011: The Peplink body exit shall use the physically verified 4.10 × 2.40 mm opening.
 - MCH-M-012: Internal routing features shall retain wiring away from fuse terminals and lid screws.
 - MCH-M-013: The strain-relief cable channel shall measure 4.55 × 2.70 mm while preserving the R0.5 clamp footprint and screw spacing.
+- MCH-M-014: The Blue Sea 5045 and unfused busbar shall each have a printable mounting-fit coupon.
+- MCH-M-015: The unfused-busbar body mount shall remain provisional until its mounting centers and final orientation are physically verified.
 
 ## Printing and release
 
@@ -25,7 +27,7 @@ Requirement identifiers remain stable. Retired conceptual requirements are prese
 - MCH-P-003: No inaccessible support material shall be required.
 - MCH-P-004: Each release shall include STEP, STL, and 3MF files generated from one parametric source.
 - MCH-P-005: Every 3MF shall declare millimeter units and match its corresponding STL dimensions.
-- MCH-P-006: Control, USB-C, and wire-exit fit coupons shall be supplied.
+- MCH-P-006: Control, USB-C, wire-exit, fused-block, and unfused-block fit coupons shall be supplied.
 
 ## Interfaces
 
@@ -37,6 +39,8 @@ Requirement identifiers remain stable. Retired conceptual requirements are prese
 - MCH-I-006: **Retired** — expansion blanking plates.
 - MCH-I-007: The enclosure shall provide one AAOTOKK USB-C panel position labeled `STARLINK`.
 - MCH-I-008: The enclosure shall provide one bonded-cable exit labeled `PEPLINK`.
+- MCH-I-009: The I/O labels shall read correctly when viewed from outside the enclosure.
+- MCH-I-010: The control face shall be labeled `VOLTAGE` and `POWER`.
 
 ## Branding
 

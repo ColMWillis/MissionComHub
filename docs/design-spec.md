@@ -1,10 +1,10 @@
-# Mechanical Design Specification — Mk I R0.6
+# Mechanical Design Specification — Mk I R0.7
 
 ## Identification and scope
 
 - Product: Mission Communications Hub
 - Marking: `Mission Communications Hub / Mk I / GAWG CAP`
-- Revision: R0.6 prototype
+- Revision: R0.7 prototype
 - Function: portable power-interface enclosure for Peplink MAX BR1 Pro 5G and Starlink Mini
 - External source: Anker SOLIX C200 DC or equivalent USB-C PD source
 
@@ -12,7 +12,7 @@ The enclosure does not contain the Peplink, Starlink Mini, iPad, battery, or cer
 
 ## Envelope and construction
 
-| Feature | R0.5 value |
+| Feature | R0.7 value |
 |---|---:|
 | Body envelope | 140 × 90 × 52 mm |
 | Wall thickness | 3.0 mm |
@@ -31,6 +31,7 @@ The body and lid are separate, serviceable printed parts. R0.3 corrected the inh
 - Switch cutout: 38.55 × 20.77 mm
 - Voltmeter nominal supplied size: 45.72 × 27.94 mm
 - Fit-tested R0.5/R0.6 voltmeter cutout: 45.17 × 26.39 mm
+- Outside control labels: `VOLTAGE` and `POWER`
 
 The voltmeter opening evolved through physical coupon testing:
 
@@ -41,6 +42,7 @@ The voltmeter opening evolved through physical coupon testing:
 ## I/O face
 
 Two AAOTOKK USB-C panel-mount positions are labeled `BATTERY` and `STARLINK`.
+R0.7 corrects all three I/O labels so they read correctly when viewed from outside the enclosure.
 
 | Feature | Dimension |
 |---|---:|
@@ -68,6 +70,8 @@ The smallest R0.5 wire-coupon opening fit correctly. The first strain-relief cha
 - Additional solder-joint allowance: 2.54 mm
 - Raised routing rails and four zip-tie tabs keep service loops away from fuse terminals
 
+The Blue Sea 5045 coupon uses the documented 65.1 mm centers. The separate unfused-busbar coupon is provisional: its supplied image indicates a 137.16 × 38.10 × 22.86 mm cover and 119.38 mm base, but does not dimension the mounting centers. The coupon therefore uses elongated slots around an estimated 106.5 mm center distance. The cover exceeds the body's 134 mm internal length by 3.16 mm, so no unfused-busbar bosses have been added to the body.
+
 ## Material and printing
 
 - Printer target: Prusa CORE One
@@ -94,7 +98,7 @@ No CAP seal or insignia is included.
 
 ## Validation
 
-R0.6 passed automated checks for:
+R0.7 passed automated checks for:
 
 - watertight STL and 3MF meshes
 - consistent mesh winding and positive volume

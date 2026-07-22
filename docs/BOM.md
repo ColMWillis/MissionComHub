@@ -1,17 +1,19 @@
-# Bill of Materials — Mk I R0.6 Prototype
+# Bill of Materials — Mk I R0.7 Prototype
 
-This BOM records the components around which the R0.6 mechanical geometry was designed. Electrical ratings and final wiring remain subject to verification.
+This BOM records the components around which the R0.7 mechanical geometry was designed. Electrical ratings and final wiring remain subject to verification.
 
 ## Printed parts
 
 | Ref | Qty | Part | Release file |
 |---|---:|---|---|
-| ENC-001 | 1 | Main body | `MCH-MkI_body_R0.6` |
-| ENC-002 | 1 | Branded locating-lip lid | `MCH-MkI_lid_R0.6` |
-| ENC-003 | 1 | Peplink cable clamp | `MCH-MkI_peplink_strain_relief_R0.6` |
-| TST-001 | 1 | Control fit coupon | `MCH-MkI_control_fit_coupon_R0.6` |
-| TST-002 | 1 | AAOTOKK USB-C fit coupon | `MCH-MkI_AAOTOKK_USB-C_fit_coupon_R0.6` |
-| TST-003 | 1 | Wire-exit fit coupon | `MCH-MkI_wire_exit_fit_coupon_R0.6` |
+| ENC-001 | 1 | Main body | `MCH-MkI_body_R0.7` |
+| ENC-002 | 1 | Branded locating-lip lid | `MCH-MkI_lid_R0.7` |
+| ENC-003 | 1 | Peplink cable clamp | `MCH-MkI_peplink_strain_relief_R0.7` |
+| TST-001 | 1 | Control fit coupon | `MCH-MkI_control_fit_coupon_R0.7` |
+| TST-002 | 1 | AAOTOKK USB-C fit coupon | `MCH-MkI_AAOTOKK_USB-C_fit_coupon_R0.7` |
+| TST-003 | 1 | Wire-exit fit coupon | `MCH-MkI_wire_exit_fit_coupon_R0.7` |
+| TST-004 | 1 | Blue Sea 5045 fused-block riser coupon | `MCH-MkI_BlueSea5045_fused_block_riser_coupon_R0.7` |
+| TST-005 | 1 | Provisional unfused-busbar riser coupon | `MCH-MkI_unfused_busbar_riser_coupon_R0.7` |
 
 Recommended enclosure material is PETG-CF printed on a Prusa CORE One with a hardened nozzle.
 
@@ -23,6 +25,7 @@ Recommended enclosure material is PETG-CF printed on a Prusa CORE One with a har
 | SW-001 | 1 | Master power switch | 38.55 × 20.77 mm cutout |
 | DSP-001 | 1 | DC voltmeter | R0.5 fit-tested 45.17 × 26.39 mm cutout |
 | FUS-001 | 1 | Blue Sea Systems 5045 compact four-circuit fuse block | 92.5 × 43.8 mm reserved; 65.1 mm boss centers |
+| BUS-001 | 1 | Unfused 12-position busbar from supplied image | 137.16 × 38.10 × 22.86 mm cover; mounting centers pending physical measurement; does not yet fit current body flat |
 | PWR-001 | As req. | USB-C PD interface/trigger board | Cradles based on 17.78 × 43.18 mm board plus 2.54 mm solder allowance |
 | CAB-001 | 1 | Mobile Must Have fused Peplink DC cable | Bonded 20 AWG pair; 4.10 × 2.40 mm body exit and 4.55 × 2.70 mm clamp channel |
 | HW-001 | 4 | M3 heat-set inserts | Verify pilot fit in PETG-CF |
@@ -51,3 +54,4 @@ Before energized assembly:
 4. Select and document the M3 and M4 insert/fastener method.
 5. Verify the exact PD module electrical profiles, ratings, polarity, and thermal behavior.
 6. Establish final fuse and wire sizes from measured loads and manufacturer requirements.
+7. Test both block coupons and record the unfused bar's actual mounting centers, base clearance, and usable orientation.

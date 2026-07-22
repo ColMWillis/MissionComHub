@@ -17,3 +17,10 @@ For the current R0.6 release, use:
 python tools/validate_release_r06.py
 python tools/render_preview_r06.py
 ```
+
+For the current R0.7 release, use:
+
+```text
+python tools/validate_release_r07.py
+python tools/render_preview_r07.py
+```

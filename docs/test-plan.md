@@ -1,8 +1,8 @@
-# Mk I R0.6 Prototype Test Plan
+# Mk I R0.7 Prototype Test Plan
 
 ## Automated release validation
 
-| Test ID | Method | Pass criterion | R0.5 |
+| Test ID | Method | Pass criterion | R0.7 |
 |---|---|---|---|
 | T-A-001 | Inspect every STL and 3MF mesh | Watertight, consistent winding, positive volume | Pass |
 | T-A-002 | Compare matching STL and 3MF extents | Agreement within 0.02 mm | Pass |
@@ -13,8 +13,9 @@
 | T-A-007 | Read dimensions manifest | Voltmeter opening equals 45.17 × 26.39 mm | Pass |
 | T-A-008 | Read dimensions manifest | Peplink exit equals 4.10 × 2.40 mm | Pass |
 | T-A-009 | Read dimensions manifest | Strain-relief channel equals 4.55 × 2.70 mm | Pass |
+| T-A-010 | Inspect block coupon exports | Both coupons are watertight and have matching STL/3MF extents | Pass |
 
-Detailed values are in `CAD/Releases/R0.6/VALIDATION.md` and `validation_report.json`.
+Detailed values are in `CAD/Releases/R0.7/VALIDATION.md` and `validation_report.json`.
 
 ## Physical fit tests
 
@@ -26,6 +27,8 @@ Detailed values are in `CAD/Releases/R0.6/VALIDATION.md` and `validation_report.
 | T-F-004 | Fit Peplink cable in the 4.10 × 2.40 mm opening | Passes without insulation damage |
 | T-F-005 | Tighten cable clamp | Cable resists a gentle pull without visible crushing |
 | T-F-006 | Fit Blue Sea 5045 | Both mounting points align at 65.1 mm centers |
+| T-F-007 | Fit unfused busbar on provisional coupon | Base rests flat; actual center position is recorded; cover envelope agrees with supplied dimensions |
+| T-F-008 | Inspect outside labels | BATTERY, STARLINK, PEPLINK, VOLTAGE, and POWER are readable from outside |
 
 ## Mechanical prototype tests
 
