@@ -2,7 +2,16 @@
 
 ## [Unreleased]
 
-- Physical fit testing and electrical integration of the R0.5 prototype.
+- Physical fit testing and electrical integration of the R0.6 prototype.
+
+## [R0.6] — 2026-07-22
+
+### Changed
+
+- Preserved the physically verified R0.5 switch and voltmeter openings.
+- Selected the smallest successful Peplink wire-coupon opening: 4.10 × 2.40 mm.
+- Enlarged the strain-relief cable channel by 0.50 mm overall in width and height, to 4.55 × 2.70 mm.
+- Preserved the 18 × 10 mm clamp footprint and screw spacing.
 
 ## [R0.5] — 2026-07-22
 

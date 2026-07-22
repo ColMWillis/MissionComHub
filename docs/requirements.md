@@ -1,4 +1,4 @@
-# Mk I R0.5 Requirements
+# Mk I R0.6 Requirements
 
 Requirement identifiers remain stable. Retired conceptual requirements are preserved and not reassigned.
 
@@ -14,8 +14,9 @@ Requirement identifiers remain stable. Retired conceptual requirements are prese
 - MCH-M-008: The enclosure shall have rounded external corners and no sharp cable-contact edges.
 - MCH-M-009: Normal lid and strain-relief service shall not require destructive removal of printed parts.
 - MCH-M-010: Blue Sea 5045 bosses shall use 65.1 mm mounting centers.
-- MCH-M-011: The Peplink exit and clamp shall accommodate a 3.81 × 2.03 mm bonded cable without intentional crushing.
+- MCH-M-011: The Peplink body exit shall use the physically verified 4.10 × 2.40 mm opening.
 - MCH-M-012: Internal routing features shall retain wiring away from fuse terminals and lid screws.
+- MCH-M-013: The strain-relief cable channel shall measure 4.55 × 2.70 mm while preserving the R0.5 clamp footprint and screw spacing.
 
 ## Printing and release
 

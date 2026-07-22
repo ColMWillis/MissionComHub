@@ -1,14 +1,14 @@
-# Assembly Guide — Mk I R0.5 Prototype
+# Assembly Guide — Mk I R0.6 Prototype
 
 ## 1. Print and verify coupons
 
 Use the intended PETG-CF profile for all coupons.
 
-1. Print `MCH-MkI_control_fit_coupon_R0.5.3mf`.
+1. Print `MCH-MkI_control_fit_coupon_R0.6.3mf` if the verified control dimensions need reconfirmation on a different printer profile.
 2. Confirm the switch snaps or seats without distorting the coupon.
 3. Confirm the voltmeter fits the 45.17 × 26.39 mm opening without rattle or excessive force.
 4. Print the AAOTOKK USB-C coupon and verify the flange recess, central opening, and both screw positions.
-5. Print the wire-exit coupon and choose the smallest opening that passes the bonded Peplink cable without scraping or pinching it.
+5. The R0.6 body uses the physically verified 4.10 × 2.40 mm Peplink opening. Confirm it again if the printer profile changes.
 
 Do not print the complete body until these fits are accepted.
 
@@ -33,7 +33,7 @@ Allow inserts to cool before installing screws.
 1. Install the switch and voltmeter on the control face.
 2. Install the two AAOTOKK panel connectors on the I/O face.
 3. Route the Peplink bonded pair through its exit.
-4. Fit the printed clamp over the cable channel and tighten only enough to prevent movement; do not flatten or cut the insulation.
+4. Fit the printed clamp with its 4.55 × 2.70 mm channel and tighten only enough to prevent movement; do not flatten or cut the insulation.
 5. Place the Blue Sea 5045 on its 65.1 mm mounting centers.
 6. Trial-fit PD modules in the universal cradles.
 7. Route dummy cable through the rails and tie-downs to confirm service-loop clearance.

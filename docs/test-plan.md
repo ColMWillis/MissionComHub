@@ -1,4 +1,4 @@
-# Mk I R0.5 Prototype Test Plan
+# Mk I R0.6 Prototype Test Plan
 
 ## Automated release validation
 
@@ -11,17 +11,19 @@
 | T-A-005 | Measure body mesh | 140 × 90 × 52 mm within 0.02 mm | Pass |
 | T-A-006 | Intersect assembled body and lid STEP solids | No interference above 0.05 mm³ | Pass: 0 mm³ |
 | T-A-007 | Read dimensions manifest | Voltmeter opening equals 45.17 × 26.39 mm | Pass |
+| T-A-008 | Read dimensions manifest | Peplink exit equals 4.10 × 2.40 mm | Pass |
+| T-A-009 | Read dimensions manifest | Strain-relief channel equals 4.55 × 2.70 mm | Pass |
 
-Detailed values are in `CAD/Releases/R0.5/VALIDATION.md` and `validation_report.json`.
+Detailed values are in `CAD/Releases/R0.6/VALIDATION.md` and `validation_report.json`.
 
 ## Physical fit tests
 
 | Test ID | Method | Pass criterion |
 |---|---|---|
 | T-F-001 | Fit switch in control coupon | Fully retained; no coupon distortion |
-| T-F-002 | Fit voltmeter in R0.5 control coupon | Seats without rattle or excessive insertion force |
+| T-F-002 | Fit voltmeter in R0.6 control coupon | Seats without rattle or excessive insertion force |
 | T-F-003 | Fit AAOTOKK connector | Flange seats in recess; screws and aperture align |
-| T-F-004 | Fit Peplink cable in selected coupon slot | Passes without insulation damage |
+| T-F-004 | Fit Peplink cable in the 4.10 × 2.40 mm opening | Passes without insulation damage |
 | T-F-005 | Tighten cable clamp | Cable resists a gentle pull without visible crushing |
 | T-F-006 | Fit Blue Sea 5045 | Both mounting points align at 65.1 mm centers |
 

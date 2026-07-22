@@ -1,10 +1,10 @@
-# Mechanical Design Specification — Mk I R0.5
+# Mechanical Design Specification — Mk I R0.6
 
 ## Identification and scope
 
 - Product: Mission Communications Hub
 - Marking: `Mission Communications Hub / Mk I / GAWG CAP`
-- Revision: R0.5 prototype
+- Revision: R0.6 prototype
 - Function: portable power-interface enclosure for Peplink MAX BR1 Pro 5G and Starlink Mini
 - External source: Anker SOLIX C200 DC or equivalent USB-C PD source
 
@@ -30,7 +30,7 @@ The body and lid are separate, serviceable printed parts. R0.3 corrected the inh
 - Power switch nominal body: 38.10 × 20.32 mm
 - Switch cutout: 38.55 × 20.77 mm
 - Voltmeter nominal supplied size: 45.72 × 27.94 mm
-- Fit-tested R0.5 voltmeter cutout: 45.17 × 26.39 mm
+- Fit-tested R0.5/R0.6 voltmeter cutout: 45.17 × 26.39 mm
 
 The voltmeter opening evolved through physical coupon testing:
 
@@ -53,9 +53,11 @@ Two AAOTOKK USB-C panel-mount positions are labeled `BATTERY` and `STARLINK`.
 The `PEPLINK` exit is designed around a measured bonded red/black 20 AWG pair:
 
 - Cable: 3.81 × 2.03 mm
-- Body exit: 4.35 × 2.65 mm
-- Strain-relief channel: 4.05 × 2.20 mm
+- Fit-tested body exit: 4.10 × 2.40 mm
+- R0.6 strain-relief channel: 4.55 × 2.70 mm
 - Clamp: 18 × 10 × 3.6 mm with two M3 positions
+
+The smallest R0.5 wire-coupon opening fit correctly. The first strain-relief channel was too tight, so R0.6 adds 0.50 mm overall in both channel dimensions without changing the cover footprint or screw spacing.
 
 ## Internal geometry
 
@@ -92,7 +94,7 @@ No CAP seal or insignia is included.
 
 ## Validation
 
-R0.5 passed automated checks for:
+R0.6 passed automated checks for:
 
 - watertight STL and 3MF meshes
 - consistent mesh winding and positive volume

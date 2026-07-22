@@ -1,0 +1,97 @@
+{
+  "revision": "R0.6",
+  "enclosure_mm": [
+    140.0,
+    90.0,
+    52.0
+  ],
+  "wall_mm": 3.0,
+  "lid": {
+    "plate_thickness_mm": 4.0,
+    "lip_depth_mm": 3.5,
+    "lip_outer_mm": [
+      133.3,
+      83.3
+    ],
+    "lip_ring_thickness_mm": 2.0,
+    "body_opening_mm": [
+      134.0,
+      84.0
+    ],
+    "clearance_each_side_mm": 0.35
+  },
+  "switch_user_size_mm": [
+    38.1,
+    20.32
+  ],
+  "switch_cutout_mm": [
+    38.55,
+    20.77
+  ],
+  "voltmeter_user_size_mm": [
+    45.72,
+    27.94
+  ],
+  "voltmeter_cutout_mm": [
+    45.17,
+    26.39
+  ],
+  "voltmeter_reduction_from_r03_total_mm": [
+    1.0,
+    2.0
+  ],
+  "voltmeter_change_from_r04_mm": [
+    1.0,
+    0.0
+  ],
+  "pd_board_mm": [
+    17.78,
+    43.18,
+    2.54
+  ],
+  "aaotokk_usb_c": {
+    "flange_mm": [
+      33.0,
+      25.0
+    ],
+    "flange_recess_mm": [
+      33.4,
+      25.4,
+      0.8
+    ],
+    "connector_cutout_mm": [
+      11.0,
+      6.0
+    ],
+    "mount_hole_ctc_mm": 25.0,
+    "mount_hole_diameter_mm": 2.8
+  },
+  "blue_sea_5045": {
+    "overall_mm": [
+      92.5,
+      43.8
+    ],
+    "mounting_centers_mm": 65.1,
+    "boss_center_mm": [
+      8.0,
+      -18.0
+    ],
+    "pilot_diameter_mm": 3.6
+  },
+  "peplink_bonded_cable_mm": [
+    3.81,
+    2.03
+  ],
+  "peplink_wire_exit_mm": [
+    4.1,
+    2.4
+  ],
+  "peplink_strain_channel_mm": [
+    4.55,
+    2.7
+  ],
+  "peplink_r06_strain_channel_increase_total_mm": [
+    0.5,
+    0.5
+  ]
+}

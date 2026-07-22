@@ -1,17 +1,17 @@
 # CAD Files
 
-The parametric source of truth is [`CadQuery/make_mch_mk1_r05.py`](CadQuery/make_mch_mk1_r05.py).
+The current parametric source of truth is [`CadQuery/make_mch_mk1_r06.py`](CadQuery/make_mch_mk1_r06.py).
 
-R0.5 exports are organized by format:
+R0.6 exports are organized by format:
 
-- [`3MF/R0.5`](3MF/R0.5) — print meshes in millimeter units
-- [`STL/R0.5`](STL/R0.5) — triangulated print meshes
-- [`STEP/R0.5`](STEP/R0.5) — neutral editable solids for Fusion and other CAD tools
-- [`Releases/R0.5`](Releases/R0.5) — README, dimensions, checksums, and validation results
+- [`3MF/R0.6`](3MF/R0.6) — print meshes in millimeter units
+- [`STL/R0.6`](STL/R0.6) — triangulated print meshes
+- [`STEP/R0.6`](STEP/R0.6) — neutral editable solids for Fusion and other CAD tools
+- [`Releases/R0.6`](Releases/R0.6) — README, dimensions, checksums, and validation results
 
-All three export formats were generated from the same CadQuery source. The complete packaged release is under [`../releases/R0.5`](../releases/R0.5).
+All three export formats were generated from the same CadQuery source. The complete packaged release is under [`../releases/R0.6`](../releases/R0.6).
 
-## R0.5 printable objects
+## R0.6 printable objects
 
 1. Main enclosure body
 2. Branded locating-lip lid

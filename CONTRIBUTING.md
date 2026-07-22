@@ -12,7 +12,7 @@
 
 Prototype printed parts shall include an internal revision marking, for example:
 
-`MCH-MK1 R0.5 PROTOTYPE`
+`MCH-MK1 R0.6 PROTOTYPE`
 
 ## CAD exports
 
