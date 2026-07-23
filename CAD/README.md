@@ -22,4 +22,8 @@ All three export formats were generated from the same CadQuery source. The compl
 7. Blue Sea 5045 fused-block riser coupon
 8. Unfused-busbar riser coupon at measured 114.3 mm centers
 
+## R0.8A USB-C refinement coupon
+
+`MCH-MkI_USB-C_panel_fit_coupon_18.70-18.75_R0.8A` is a focused two-position coupon created after the 18.80 mm position was slightly loose. The left opening is 18.75 mm and the right opening is 18.70 mm. The enclosure body is not changed until this coupon identifies the preferred fit.
+
 Do not alter a mesh export without updating the parametric source and regenerating every synchronized format.

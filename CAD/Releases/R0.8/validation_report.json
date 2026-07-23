@@ -16,6 +16,21 @@
       "3mf_unit": "millimeter",
       "3mf_matches_stl_extents": true
     },
+    "MCH-MkI_USB-C_panel_fit_coupon_18.70-18.75_R0.8A": {
+      "faces": 3940,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        68.0,
+        34.0,
+        3.2
+      ],
+      "mesh_volume_mm3": 6616.7,
+      "step_solids": 1,
+      "step_volume_mm3": 6616.58,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    },
     "MCH-MkI_USB-C_panel_fit_coupon_R0.8": {
       "faces": 5256,
       "watertight": true,

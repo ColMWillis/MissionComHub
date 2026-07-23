@@ -2,7 +2,8 @@
 
 ## [Unreleased]
 
-- Physical fit testing of the R0.8 USB-C coupon and full enclosure.
+- Added a focused R0.8A USB-C refinement coupon after the 18.80 mm position tested approximately 0.05 mm too large.
+- The refinement coupon provides engraved 18.75 mm and 18.70 mm screw-center positions; the R0.8 body remains unchanged pending the result.
 
 ## [R0.8] — 2026-07-22
 
