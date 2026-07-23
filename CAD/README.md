@@ -1,26 +1,26 @@
 # CAD Files
 
-The current parametric source of truth is [`CadQuery/make_mch_mk1_r08.py`](CadQuery/make_mch_mk1_r08.py).
+The current parametric source of truth is [`CadQuery/make_mch_mk1_r09.py`](CadQuery/make_mch_mk1_r09.py).
 
-R0.8 exports are organized by format:
+R0.9 final-draft exports are organized by format:
 
-- [`3MF/R0.8`](3MF/R0.8) — print meshes in millimeter units
-- [`STL/R0.8`](STL/R0.8) — triangulated print meshes
-- [`STEP/R0.8`](STEP/R0.8) — neutral editable solids for Fusion and other CAD tools
-- [`Releases/R0.8`](Releases/R0.8) — README, dimensions, checksums, and validation results
+- [`3MF/R0.9`](3MF/R0.9) — print meshes in millimeter units
+- [`STL/R0.9`](STL/R0.9) — triangulated print meshes
+- [`STEP/R0.9`](STEP/R0.9) — neutral editable solids for Fusion and other CAD tools
+- [`Releases/R0.9`](Releases/R0.9) — README, dimensions, checksums, and validation results
 
-All three export formats were generated from the same CadQuery source. The complete packaged release is under [`../releases/R0.8`](../releases/R0.8).
+All three export formats were generated from the same CadQuery source. The complete packaged release is under [`../releases/R0.9`](../releases/R0.9).
 
-## R0.8 printable objects
+## R0.9 printable objects
 
 1. Main enclosure body
 2. Branded locating-lip lid
 3. Peplink bonded-cable strain-relief clamp
 4. Control fit coupon
-5. Three-position USB-C panel fit coupon
+5. Final 18.55 mm USB-C fit coupon
 6. Peplink wire-exit fit coupon
 7. Blue Sea 5045 fused-block riser coupon
-8. Unfused-busbar riser coupon at measured 114.3 mm centers
+8. Unfused-busbar riser coupon at confirmed 120.65 mm centers
 
 ## R0.8A USB-C refinement coupon
 
@@ -35,6 +35,6 @@ Both measurements are engraved on their coupons. The enclosure body remains at t
 
 ## R0.8C USB-C refinement coupon
 
-`MCH-MkI_USB-C_panel_fit_coupon_18.55mm_R0.8C` is a compact single-position coupon at 18.55 mm screw centers. The accepted busbar value is now 120.65 mm; the enclosure body will be updated after this USB fit is confirmed.
+`MCH-MkI_USB-C_panel_fit_coupon_18.55mm_R0.8C` is a compact single-position coupon at 18.55 mm screw centers. This fit and the 120.65 mm busbar value were subsequently confirmed and incorporated into the R0.9 final draft.
 
 Do not alter a mesh export without updating the parametric source and regenerating every synchronized format.

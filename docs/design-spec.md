@@ -1,10 +1,10 @@
-# Mechanical Design Specification — Mk I R0.8
+# Mechanical Design Specification — Mk I R0.9 Final Draft
 
 ## Identification and scope
 
 - Product: Mission Communications Hub
 - Marking: `Mission Communications Hub / Mk I / GAWG CAP`
-- Revision: R0.8 prototype
+- Revision: R0.9 final draft
 - Function: portable power-interface enclosure for Peplink MAX BR1 Pro 5G and Starlink Mini
 - External source: Anker SOLIX C200 DC or equivalent USB-C PD source
 
@@ -49,10 +49,10 @@ Two received cable-backed USB-C panel-mount positions are labeled `BATTERY` and 
 | Printed pass-through | 13.20 × 6.85 mm |
 | Measured rounded flange | 25.40 × 7.62 mm |
 | Flush recess | 25.80 × 8.02 × 0.8 mm deep |
-| Nominal screw centers | 19.05 mm |
+| Confirmed screw centers | 18.55 mm |
 | Screw clearance | 2.8 mm diameter |
 
-The USB coupon provides 18.80, 19.05, and 19.30 mm center variants. The body uses the nominal 19.05 mm interface pending coupon confirmation.
+The body and final USB coupon use the physically confirmed 18.55 mm centers.
 
 The `PEPLINK` exit is designed around a measured bonded red/black 20 AWG pair:
 
@@ -69,11 +69,11 @@ The smallest R0.5 wire-coupon opening fit correctly. The first strain-relief cha
 - Mounting-boss centers: 65.1 mm
 - Boss pilot holes: 3.6 mm; final M4 fastening method must be physically verified
 - Unfused busbar cover envelope: 137.16 × 38.10 × 22.86 mm
-- Unfused busbar mounting centers: physically measured 114.30 mm
+- Unfused busbar mounting centers: physically confirmed 120.65 mm
 - Unfused busbar mounting-hole diameter in R0.8: 5.5 mm
 - Four zip-tie tabs occupy the clear channel between the power blocks
 
-The Blue Sea 5045 coupon uses 65.1 mm centers. R0.8 adds the received unfused busbar to the body at its measured 114.3 mm centers. The enclosure grew to 146 × 96 mm, and the lid posts were relocated to clear the full cover envelope. Obsolete USB PCB shelves were removed because the received interfaces have cable backs.
+The Blue Sea 5045 coupon uses 65.1 mm centers. R0.9 mounts the received unfused busbar at its confirmed 120.65 mm centers. The 146 × 96 mm enclosure, relocated lid posts, and cable-backed USB layout are retained from R0.8.
 
 ## Material and printing
 
@@ -101,7 +101,7 @@ No CAP seal or insignia is included.
 
 ## Validation
 
-R0.8 passed automated checks for:
+R0.9 passed automated checks for:
 
 - watertight STL and 3MF meshes
 - consistent mesh winding and positive volume

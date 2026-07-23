@@ -1,10 +1,10 @@
-# Mk I R0.8 Requirements
+# Mk I R0.9 Final-Draft Requirements
 
 Requirement identifiers remain stable. Retired conceptual requirements are preserved and not reassigned.
 
 ## Mechanical
 
-- MCH-M-001: The R0.8 body shall measure 146 × 96 × 52 mm.
+- MCH-M-001: The R0.9 body shall measure 146 × 96 × 52 mm.
 - MCH-M-002: The enclosure shall use a separate body and removable locating-lip lid.
 - MCH-M-003: Lid service points shall use M3 machine-screw positions suitable for inserts.
 - MCH-M-004: **Retired** — removable electronics sled.
@@ -18,7 +18,7 @@ Requirement identifiers remain stable. Retired conceptual requirements are prese
 - MCH-M-012: Internal routing features shall retain wiring away from fuse terminals and lid screws.
 - MCH-M-013: The strain-relief cable channel shall measure 4.55 × 2.70 mm while preserving the R0.5 clamp footprint and screw spacing.
 - MCH-M-014: The Blue Sea 5045 and unfused busbar shall each have a printable mounting-fit coupon.
-- MCH-M-015: The unfused busbar shall mount at the physically measured 114.30 mm centers.
+- MCH-M-015: The unfused busbar shall mount at the physically confirmed 120.65 mm centers.
 - MCH-M-016: The covered unfused busbar and Blue Sea 5045 envelopes shall not intersect the body or each other above their mounting risers.
 
 ## Printing and release
@@ -43,6 +43,7 @@ Requirement identifiers remain stable. Retired conceptual requirements are prese
 - MCH-I-009: The I/O labels shall read correctly when viewed from outside the enclosure.
 - MCH-I-010: The control face shall be labeled `VOLTAGE` and `POWER`.
 - MCH-I-011: Each USB-C interface shall provide a 13.20 × 6.85 mm rounded pass-through and a 25.80 × 8.02 mm rounded flange recess.
+- MCH-I-012: Both USB-C interfaces shall use the physically confirmed 18.55 mm screw centers.
 
 ## Branding
 

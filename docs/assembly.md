@@ -1,16 +1,16 @@
-# Assembly Guide — Mk I R0.8 Prototype
+# Assembly Guide — Mk I R0.9 Final Draft
 
 ## 1. Print and verify coupons
 
 Use the intended PETG-CF profile for all coupons.
 
-1. Print `MCH-MkI_control_fit_coupon_R0.8.3mf` if the verified control dimensions need reconfirmation on a different printer profile.
+1. Print `MCH-MkI_control_fit_coupon_R0.9.3mf` if the verified control dimensions need reconfirmation on a different printer profile.
 2. Confirm the switch snaps or seats without distorting the coupon.
 3. Confirm the voltmeter fits the 45.17 × 26.39 mm opening without rattle or excessive force.
-4. Print the three-position USB-C coupon. Test the center 19.05 mm interface first, then the 18.80 or 19.30 mm option if necessary. Verify the rounded flange recess, central opening, and both screws.
+4. The final USB-C interface uses confirmed 18.55 mm screw centers. Reprint the final coupon only if the printer profile changes.
 5. The R0.6 body uses the physically verified 4.10 × 2.40 mm Peplink opening. Confirm it again if the printer profile changes.
 6. Print the Blue Sea 5045 fused-block coupon and verify both risers at 65.1 mm centers.
-7. Print the unfused-busbar coupon and verify its fixed 114.30 mm centers and 5.5 mm mounting holes.
+7. The final unfused-busbar coupon and body use confirmed 120.65 mm centers and 5.5 mm mounting holes.
 
 Do not print the complete body until these fits are accepted.
 
@@ -39,7 +39,7 @@ Allow inserts to cool before installing screws.
 5. Place the Blue Sea 5045 on its 65.1 mm mounting centers.
 6. Trial-fit PD modules in the universal cradles.
 7. Route dummy cable through the rails and tie-downs to confirm service-loop clearance.
-8. Install the unfused busbar on its R0.8 bosses and verify the cover clears the body, lid posts, and central cable channel.
+8. Install the unfused busbar on its R0.9 bosses and verify the cover clears the body, lid posts, and central cable channel.
 
 ## 5. Lid fit
 

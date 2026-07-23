@@ -31,3 +31,10 @@ For the current R0.8 release, use:
 python tools/validate_release_r08.py
 python tools/render_preview_r08.py
 ```
+
+For the R0.9 final draft, use:
+
+```text
+python tools/validate_release_r09.py
+python tools/render_preview_r09.py
+```

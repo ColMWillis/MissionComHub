@@ -1,4 +1,4 @@
-# Mk I R0.8 Prototype Test Plan
+# Mk I R0.9 Final-Draft Test Plan
 
 ## Automated release validation
 
@@ -16,7 +16,7 @@
 | T-A-010 | Inspect block coupon exports | Both coupons are watertight and have matching STL/3MF extents | Pass |
 | T-A-011 | Intersect conservative component envelopes | Fused block, unfused busbar, and body have zero intersection above risers | Pass |
 
-Detailed values are in `CAD/Releases/R0.8/VALIDATION.md` and `validation_report.json`.
+Detailed values are in `CAD/Releases/R0.9/VALIDATION.md` and `validation_report.json`.
 
 ## Physical fit tests
 
@@ -24,11 +24,11 @@ Detailed values are in `CAD/Releases/R0.8/VALIDATION.md` and `validation_report.
 |---|---|---|
 | T-F-001 | Fit switch in control coupon | Fully retained; no coupon distortion |
 | T-F-002 | Fit voltmeter in R0.6 control coupon | Seats without rattle or excessive insertion force |
-| T-F-003 | Fit received USB-C connector | Record which of the 18.80, 19.05, or 19.30 mm interfaces fits; flange and pass-through seat without force |
+| T-F-003 | Fit received USB-C connector | Confirm the final 18.55 mm interface seats without force or movement |
 | T-F-004 | Fit Peplink cable in the 4.10 × 2.40 mm opening | Passes without insulation damage |
 | T-F-005 | Tighten cable clamp | Cable resists a gentle pull without visible crushing |
 | T-F-006 | Fit Blue Sea 5045 | Both mounting points align at 65.1 mm centers |
-| T-F-007 | Fit unfused busbar on R0.8 coupon | Base rests flat; both fixed 114.30 mm mounting points align; supplied screws clear the 5.5 mm holes |
+| T-F-007 | Fit unfused busbar on R0.9 coupon | Base rests flat; both confirmed 120.65 mm mounting points align; supplied screws clear the 5.5 mm holes |
 | T-F-008 | Inspect outside labels | BATTERY, STARLINK, PEPLINK, VOLTAGE, and POWER are readable from outside |
 
 ## Mechanical prototype tests

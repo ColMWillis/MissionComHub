@@ -2,44 +2,45 @@
 
 **Branding:** Mission Communications Hub / Mk I / GAWG CAP
 
-**Current mechanical revision:** R0.8
+**Current mechanical revision:** R0.9 final draft
 
 MissionComHub is an experimental portable power-interface enclosure for a Peplink MAX BR1 Pro 5G and Starlink Mini using an Anker SOLIX C200 DC or equivalent USB-C PD source. It is designed for temporary CAP aircraft, ground-vehicle, and mission-base use.
 
-![Mission Communications Hub R0.8 preview](images/R0.8_preview.png)
+![Mission Communications Hub R0.9 preview](images/R0.9_preview.png)
 
-## R0.8 configuration
+## R0.9 final-draft configuration
 
 - 146 × 96 × 52 mm PETG-CF body, minimally enlarged for both received power blocks
 - Separate 4 mm serviceable lid with locating lip and raised branding
 - Power switch opening: 38.55 × 20.77 mm
 - Fit-tested voltmeter opening: 45.17 × 26.39 mm
 - Two refactored USB-C panel positions for the received cable-backed fittings
+- Confirmed 18.55 mm USB-C mounting centers
 - 13.20 × 6.85 mm printed pass-throughs for the measured 12.70 × 6.35 mm bodies
 - 25.80 × 8.02 mm rounded flange pockets for the measured 25.40 × 7.62 mm flanges
 - Fit-tested 4.10 × 2.40 mm bonded-cable exit for the Peplink lead
 - Enlarged 4.55 × 2.70 mm strain-relief channel and two-screw clamp
 - Internal Blue Sea Systems 5045 mounting bosses at 65.1 mm centers
-- Internal unfused-busbar bosses at the physically measured 114.3 mm centers
+- Internal unfused-busbar bosses at the confirmed 120.65 mm (4.75 inch) centers
 - A clear central cable channel with four tie-down points
 - Correctly oriented exterior `BATTERY`, `STARLINK`, and `PEPLINK` I/O labels
 - Exterior `VOLTAGE` and `POWER` control labels
 - Blue Sea 5045 fused-block riser coupon
-- Full-envelope unfused-busbar riser coupon with fixed 114.3 mm centers
-- Three-position USB-C fit coupon at 18.80, 19.05, and 19.30 mm screw centers
+- Full-envelope unfused-busbar riser coupon with fixed 120.65 mm centers
+- Final engraved USB-C coupon at 18.55 mm centers
 
-R0.8 preserves the verified controls, Peplink exit, strain relief, exterior labels, and serviceable lid. It replaces the obsolete large USB geometry and provisional busbar mounting with geometry based on the received parts. The obsolete PCB-backed USB shelves were removed because the received panel fittings have cable backs.
+R0.9 incorporates the completed coupon-testing results into the production body. It preserves the verified controls, Peplink exit, strain relief, exterior labels, serviceable lid, received USB geometry, and side-by-side power-block layout. Full assembly testing is the remaining gate before R1.0.
 
 ## Download and print
 
-- Complete package: [`releases/R0.8/MissionComHub_MkI_Enclosure_R0.8.zip`](releases/R0.8/MissionComHub_MkI_Enclosure_R0.8.zip)
-- 3MF files: [`CAD/3MF/R0.8`](CAD/3MF/R0.8)
-- STL files: [`CAD/STL/R0.8`](CAD/STL/R0.8)
-- STEP files: [`CAD/STEP/R0.8`](CAD/STEP/R0.8)
-- Parametric CadQuery generator: [`CAD/CadQuery/make_mch_mk1_r08.py`](CAD/CadQuery/make_mch_mk1_r08.py)
-- Dimensions and validation: [`CAD/Releases/R0.8`](CAD/Releases/R0.8)
+- Complete package: [`releases/R0.9/MissionComHub_MkI_Enclosure_R0.9.zip`](releases/R0.9/MissionComHub_MkI_Enclosure_R0.9.zip)
+- 3MF files: [`CAD/3MF/R0.9`](CAD/3MF/R0.9)
+- STL files: [`CAD/STL/R0.9`](CAD/STL/R0.9)
+- STEP files: [`CAD/STEP/R0.9`](CAD/STEP/R0.9)
+- Parametric CadQuery generator: [`CAD/CadQuery/make_mch_mk1_r09.py`](CAD/CadQuery/make_mch_mk1_r09.py)
+- Dimensions and validation: [`CAD/Releases/R0.9`](CAD/Releases/R0.9)
 
-Print the control, three-position USB-C, wire-exit, fused-block, and unfused-block coupons before committing to the complete body.
+The coupon dimensions are now confirmed. Print the R0.9 body, lid, and strain-relief clamp for the full assembly draft.
 
 ## Suggested prototype settings
 
@@ -54,7 +55,7 @@ The branded lid needs slicer support beneath its center when printed branding-up
 
 ## Validation status
 
-Every R0.8 STL and 3MF is watertight with consistent winding. STEP files re-import as valid solids, STL and 3MF dimensions agree, the body envelope is exactly 146 × 96 × 52 mm, assembled body/lid interference is 0 mm³, and conservative power-block envelopes have zero interference with the body or each other.
+Every R0.9 STL and 3MF is watertight with consistent winding. STEP files re-import as valid solids, STL and 3MF dimensions agree, the body envelope is exactly 146 × 96 × 52 mm, assembled body/lid interference is 0 mm³, and conservative power-block envelopes have zero interference with the body or each other.
 
 ## Repository layout
 

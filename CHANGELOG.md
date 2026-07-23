@@ -2,9 +2,17 @@
 
 ## [Unreleased]
 
-- Confirmed the unfused-busbar fit at 120.65 mm (4.75 inch) mounting centers.
-- Added a single-position R0.8C USB-C coupon at 18.55 mm after 18.60 mm remained just outside tolerance.
-- The R0.8 body remains unchanged until the 18.55 mm USB fit is confirmed; the next body revision will incorporate both final values.
+- Full mechanical assembly, wiring, thermal, load, and restraint testing of the R0.9 final draft.
+
+## [R0.9] — 2026-07-23
+
+### Final draft
+
+- Incorporated the confirmed 18.55 mm USB-C screw centers into both body interfaces.
+- Incorporated the confirmed 120.65 mm (4.75 inch) unfused-busbar centers into the body and final coupon.
+- Replaced exploratory USB coupons with a single engraved 18.55 mm final coupon.
+- Regenerated synchronized STEP, STL, and 3MF files plus the complete ZIP release.
+- Revalidated the 146 × 96 × 52 mm enclosure, zero body/lid interference, and zero conservative power-block envelope interference.
 
 ## [R0.8] — 2026-07-22
 
