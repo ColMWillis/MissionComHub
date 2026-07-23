@@ -1,10 +1,10 @@
-# Mechanical Design Specification — Mk I R0.7
+# Mechanical Design Specification — Mk I R0.8
 
 ## Identification and scope
 
 - Product: Mission Communications Hub
 - Marking: `Mission Communications Hub / Mk I / GAWG CAP`
-- Revision: R0.7 prototype
+- Revision: R0.8 prototype
 - Function: portable power-interface enclosure for Peplink MAX BR1 Pro 5G and Starlink Mini
 - External source: Anker SOLIX C200 DC or equivalent USB-C PD source
 
@@ -14,7 +14,7 @@ The enclosure does not contain the Peplink, Starlink Mini, iPad, battery, or cer
 
 | Feature | R0.7 value |
 |---|---:|
-| Body envelope | 140 × 90 × 52 mm |
+| Body envelope | 146 × 96 × 52 mm |
 | Wall thickness | 3.0 mm |
 | Bottom thickness | 3.2 mm |
 | External corner radius | 6.0 mm |
@@ -41,16 +41,18 @@ The voltmeter opening evolved through physical coupon testing:
 
 ## I/O face
 
-Two AAOTOKK USB-C panel-mount positions are labeled `BATTERY` and `STARLINK`.
-R0.7 corrects all three I/O labels so they read correctly when viewed from outside the enclosure.
+Two received cable-backed USB-C panel-mount positions are labeled `BATTERY` and `STARLINK`. R0.8 retains the corrected outside-reading label orientation.
 
 | Feature | Dimension |
 |---|---:|
-| Flange | 33.0 × 25.0 mm |
-| Flush recess | 33.4 × 25.4 × 0.8 mm deep |
-| Connector aperture | 11.0 × 6.0 mm |
-| Screw centers | 25.0 mm |
+| Measured pass-through body | 12.70 × 6.35 mm |
+| Printed pass-through | 13.20 × 6.85 mm |
+| Measured rounded flange | 25.40 × 7.62 mm |
+| Flush recess | 25.80 × 8.02 × 0.8 mm deep |
+| Nominal screw centers | 19.05 mm |
 | Screw clearance | 2.8 mm diameter |
+
+The USB coupon provides 18.80, 19.05, and 19.30 mm center variants. The body uses the nominal 19.05 mm interface pending coupon confirmation.
 
 The `PEPLINK` exit is designed around a measured bonded red/black 20 AWG pair:
 
@@ -66,11 +68,12 @@ The smallest R0.5 wire-coupon opening fit correctly. The first strain-relief cha
 - Blue Sea Systems 5045 reserved envelope: 92.5 × 43.8 mm
 - Mounting-boss centers: 65.1 mm
 - Boss pilot holes: 3.6 mm; final M4 fastening method must be physically verified
-- Two universal PD-board cradles based on 17.78 × 43.18 mm boards
-- Additional solder-joint allowance: 2.54 mm
-- Raised routing rails and four zip-tie tabs keep service loops away from fuse terminals
+- Unfused busbar cover envelope: 137.16 × 38.10 × 22.86 mm
+- Unfused busbar mounting centers: physically measured 114.30 mm
+- Unfused busbar mounting-hole diameter in R0.8: 5.5 mm
+- Four zip-tie tabs occupy the clear channel between the power blocks
 
-The Blue Sea 5045 coupon uses the documented 65.1 mm centers. The separate unfused-busbar coupon is provisional: its supplied image indicates a 137.16 × 38.10 × 22.86 mm cover and 119.38 mm base, but does not dimension the mounting centers. The coupon therefore uses elongated slots around an estimated 106.5 mm center distance. The cover exceeds the body's 134 mm internal length by 3.16 mm, so no unfused-busbar bosses have been added to the body.
+The Blue Sea 5045 coupon uses 65.1 mm centers. R0.8 adds the received unfused busbar to the body at its measured 114.3 mm centers. The enclosure grew to 146 × 96 mm, and the lid posts were relocated to clear the full cover envelope. Obsolete USB PCB shelves were removed because the received interfaces have cable backs.
 
 ## Material and printing
 
@@ -98,14 +101,15 @@ No CAP seal or insignia is included.
 
 ## Validation
 
-R0.7 passed automated checks for:
+R0.8 passed automated checks for:
 
 - watertight STL and 3MF meshes
 - consistent mesh winding and positive volume
 - millimeter-unit 3MF package structure
 - matching STL and 3MF extents
 - successful STEP solid re-import
-- exact 140 × 90 × 52 mm body envelope
+- exact 146 × 96 × 52 mm body envelope
 - zero body/lid intersection when assembled
+- zero conservative-envelope intersection between either power block and the body or the other block
 
 Automated validation does not replace physical fit, load, thermal, vibration, restraint, or electrical testing.

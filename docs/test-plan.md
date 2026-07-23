@@ -1,4 +1,4 @@
-# Mk I R0.7 Prototype Test Plan
+# Mk I R0.8 Prototype Test Plan
 
 ## Automated release validation
 
@@ -8,14 +8,15 @@
 | T-A-002 | Compare matching STL and 3MF extents | Agreement within 0.02 mm | Pass |
 | T-A-003 | Inspect 3MF package | Valid structure; millimeter units | Pass |
 | T-A-004 | Re-import each STEP | At least one valid positive-volume solid | Pass |
-| T-A-005 | Measure body mesh | 140 × 90 × 52 mm within 0.02 mm | Pass |
+| T-A-005 | Measure body mesh | 146 × 96 × 52 mm within 0.02 mm | Pass |
 | T-A-006 | Intersect assembled body and lid STEP solids | No interference above 0.05 mm³ | Pass: 0 mm³ |
 | T-A-007 | Read dimensions manifest | Voltmeter opening equals 45.17 × 26.39 mm | Pass |
 | T-A-008 | Read dimensions manifest | Peplink exit equals 4.10 × 2.40 mm | Pass |
 | T-A-009 | Read dimensions manifest | Strain-relief channel equals 4.55 × 2.70 mm | Pass |
 | T-A-010 | Inspect block coupon exports | Both coupons are watertight and have matching STL/3MF extents | Pass |
+| T-A-011 | Intersect conservative component envelopes | Fused block, unfused busbar, and body have zero intersection above risers | Pass |
 
-Detailed values are in `CAD/Releases/R0.7/VALIDATION.md` and `validation_report.json`.
+Detailed values are in `CAD/Releases/R0.8/VALIDATION.md` and `validation_report.json`.
 
 ## Physical fit tests
 
@@ -23,18 +24,18 @@ Detailed values are in `CAD/Releases/R0.7/VALIDATION.md` and `validation_report.
 |---|---|---|
 | T-F-001 | Fit switch in control coupon | Fully retained; no coupon distortion |
 | T-F-002 | Fit voltmeter in R0.6 control coupon | Seats without rattle or excessive insertion force |
-| T-F-003 | Fit AAOTOKK connector | Flange seats in recess; screws and aperture align |
+| T-F-003 | Fit received USB-C connector | Record which of the 18.80, 19.05, or 19.30 mm interfaces fits; flange and pass-through seat without force |
 | T-F-004 | Fit Peplink cable in the 4.10 × 2.40 mm opening | Passes without insulation damage |
 | T-F-005 | Tighten cable clamp | Cable resists a gentle pull without visible crushing |
 | T-F-006 | Fit Blue Sea 5045 | Both mounting points align at 65.1 mm centers |
-| T-F-007 | Fit unfused busbar on provisional coupon | Base rests flat; actual center position is recorded; cover envelope agrees with supplied dimensions |
+| T-F-007 | Fit unfused busbar on R0.8 coupon | Base rests flat; both fixed 114.30 mm mounting points align; supplied screws clear the 5.5 mm holes |
 | T-F-008 | Inspect outside labels | BATTERY, STARLINK, PEPLINK, VOLTAGE, and POWER are readable from outside |
 
 ## Mechanical prototype tests
 
 | Test ID | Method | Pass criterion |
 |---|---|---|
-| T-M-001 | Measure printed body | Within printer-calibrated tolerance of 140 × 90 × 52 mm |
+| T-M-001 | Measure printed body | Within printer-calibrated tolerance of 146 × 96 × 52 mm |
 | T-M-002 | Cycle lid screws 20 times | No stripped insert, crack, or loss of retention |
 | T-M-003 | Open and close lid 20 times | Lip remains self-aligning without binding |
 | T-M-004 | Shake non-energized assembled enclosure by hand | No loose hardware or component movement |

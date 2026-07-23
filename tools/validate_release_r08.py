@@ -1,0 +1,171 @@
+from __future__ import annotations
+
+import hashlib
+import json
+import zipfile
+from pathlib import Path
+from xml.etree import ElementTree as ET
+
+import cadquery as cq
+import numpy as np
+import trimesh
+
+
+REPO = Path(__file__).resolve().parents[1]
+STL_DIR = REPO / "CAD/STL/R0.8"
+MF3_DIR = REPO / "CAD/3MF/R0.8"
+STEP_DIR = REPO / "CAD/STEP/R0.8"
+RELEASE_DIR = REPO / "CAD/Releases/R0.8"
+
+
+def as_mesh(path: Path) -> trimesh.Trimesh:
+    loaded = trimesh.load(path, force="scene")
+    if isinstance(loaded, trimesh.Scene):
+        if not loaded.geometry:
+            raise ValueError(f"No mesh geometry in {path.name}")
+        return trimesh.util.concatenate(tuple(loaded.geometry.values()))
+    return loaded
+
+
+results = {"revision": "R0.8", "files": {}}
+manifest = json.loads((RELEASE_DIR / "dimensions.json").read_text())
+if manifest.get("voltmeter_cutout_mm") != [45.17, 26.39]:
+    raise RuntimeError(f"Unexpected R0.8 voltmeter cutout: {manifest.get('voltmeter_cutout_mm')}")
+results["voltmeter_cutout_mm"] = manifest["voltmeter_cutout_mm"]
+if manifest.get("peplink_wire_exit_mm") != [4.1, 2.4]:
+    raise RuntimeError(f"Unexpected R0.8 Peplink exit: {manifest.get('peplink_wire_exit_mm')}")
+if manifest.get("peplink_strain_channel_mm") != [4.55, 2.7]:
+    raise RuntimeError(f"Unexpected R0.8 strain channel: {manifest.get('peplink_strain_channel_mm')}")
+results["peplink_wire_exit_mm"] = manifest["peplink_wire_exit_mm"]
+results["peplink_strain_channel_mm"] = manifest["peplink_strain_channel_mm"]
+usb = manifest.get("usb_c_panel_extension", {})
+if usb.get("measured_pass_through_mm") != [12.7, 6.35]:
+    raise RuntimeError(f"Unexpected USB pass-through: {usb.get('measured_pass_through_mm')}")
+results["usb_c_panel_extension"] = usb
+busbar = manifest.get("unfused_busbar", {})
+if busbar.get("cover_envelope_mm") != [137.16, 38.1, 22.86]:
+    raise RuntimeError(f"Unexpected unfused busbar envelope: {busbar.get('cover_envelope_mm')}")
+if busbar.get("measured_mount_centers_mm") != 114.3:
+    raise RuntimeError(f"Unexpected bus-bar mounting centers: {busbar.get('measured_mount_centers_mm')}")
+results["unfused_busbar"] = busbar
+stls = sorted(STL_DIR.glob("*.stl"))
+if not stls:
+    raise RuntimeError("No STL files found")
+
+for stl in stls:
+    stem = stl.stem
+    mf3 = MF3_DIR / f"{stem}.3mf"
+    step = STEP_DIR / f"{stem}.step"
+    if not mf3.exists() or not step.exists():
+        raise RuntimeError(f"Missing matching export for {stem}")
+
+    stl_mesh = as_mesh(stl)
+    mf3_mesh = as_mesh(mf3)
+    if not stl_mesh.is_watertight or not mf3_mesh.is_watertight:
+        raise RuntimeError(f"Non-watertight mesh: {stem}")
+    if not stl_mesh.is_winding_consistent or not mf3_mesh.is_winding_consistent:
+        raise RuntimeError(f"Inconsistent winding: {stem}")
+    if not np.allclose(stl_mesh.extents, mf3_mesh.extents, atol=0.02):
+        raise RuntimeError(f"3MF/STL extent mismatch: {stem}")
+
+    with zipfile.ZipFile(mf3) as zf:
+        required = {"3D/3dmodel.model", "_rels/.rels", "[Content_Types].xml"}
+        if not required.issubset(set(zf.namelist())):
+            raise RuntimeError(f"Incomplete 3MF package: {stem}")
+        model_root = ET.fromstring(zf.read("3D/3dmodel.model"))
+        if model_root.attrib.get("unit") != "millimeter":
+            raise RuntimeError(f"3MF units are not millimeters: {stem}")
+
+    imported = cq.importers.importStep(str(step))
+    solids = imported.solids().vals()
+    if not solids:
+        raise RuntimeError(f"STEP contains no solids: {stem}")
+    step_volume = sum(s.Volume() for s in solids)
+    if step_volume <= 0:
+        raise RuntimeError(f"STEP has zero volume: {stem}")
+
+    results["files"][stem] = {
+        "faces": int(len(stl_mesh.faces)),
+        "watertight": True,
+        "winding_consistent": True,
+        "extents_mm": [round(float(v), 4) for v in stl_mesh.extents],
+        "mesh_volume_mm3": round(float(abs(stl_mesh.volume)), 2),
+        "step_solids": len(solids),
+        "step_volume_mm3": round(float(step_volume), 2),
+        "3mf_unit": "millimeter",
+        "3mf_matches_stl_extents": True,
+    }
+
+body_extent = results["files"]["MCH-MkI_body_R0.8"]["extents_mm"]
+if not np.allclose(body_extent, [146.0, 96.0, 52.0], atol=0.02):
+    raise RuntimeError(f"Body envelope is incorrect: {body_extent}")
+
+body_step = cq.importers.importStep(str(STEP_DIR / "MCH-MkI_body_R0.8.step"))
+lid_step = cq.importers.importStep(str(STEP_DIR / "MCH-MkI_lid_R0.8.step")).translate((0, 0, 52.0))
+intersection = body_step.intersect(lid_step)
+interference_volume = sum(s.Volume() for s in intersection.solids().vals())
+if interference_volume > 0.05:
+    raise RuntimeError(f"Body/lid interference: {interference_volume:.4f} mm^3")
+results["assembled_body_lid_interference_mm3"] = round(float(interference_volume), 6)
+
+# Conservative rectangular envelopes verify that both received power blocks
+# clear the body, tall lid bosses, and each other above their mounting risers.
+fuse_data = manifest["blue_sea_5045"]
+fuse_proxy = cq.Workplane("XY").box(92.5, 43.8, 30.0, centered=(True, True, False)).translate(
+    (fuse_data["boss_center_mm"][0], fuse_data["boss_center_mm"][1], 9.4)
+)
+bus_proxy = cq.Workplane("XY").box(137.16, 38.1, 22.86, centered=(True, True, False)).translate(
+    (busbar["body_boss_center_mm"][0], busbar["body_boss_center_mm"][1], 9.4)
+)
+clearances = {
+    "fused_block_to_body_mm3": sum(s.Volume() for s in body_step.intersect(fuse_proxy).solids().vals()),
+    "unfused_busbar_to_body_mm3": sum(s.Volume() for s in body_step.intersect(bus_proxy).solids().vals()),
+    "between_power_blocks_mm3": sum(s.Volume() for s in fuse_proxy.intersect(bus_proxy).solids().vals()),
+}
+if any(volume > 0.05 for volume in clearances.values()):
+    raise RuntimeError(f"Power-block envelope interference: {clearances}")
+results["power_block_envelope_interference_mm3"] = {
+    name: round(float(volume), 6) for name, volume in clearances.items()
+}
+
+(RELEASE_DIR / "validation_report.json").write_text(json.dumps(results, indent=2) + "\n")
+
+lines = [
+    "# R0.8 Validation Report",
+    "",
+    "All matching STL, 3MF, and STEP exports passed automated validation.",
+    "",
+    "R0.8 preserves the verified **45.17 × 26.39 mm** voltmeter cutout.",
+    "",
+    "Peplink body exit: **4.10 × 2.40 mm**. Strain-relief channel: **4.55 × 2.70 mm**.",
+    "",
+    "The USB-C panel geometry uses the received 12.70 × 6.35 mm pass-through and 25.40 × 7.62 mm rounded flange.",
+    "",
+    "The unfused-bus body and coupon use the physically measured 114.30 mm mounting centers.",
+    "",
+    "| Part | Watertight | STL/3MF match | STEP solids | Extents (mm) |",
+    "|---|---:|---:|---:|---|",
+]
+for name, data in results["files"].items():
+    ext = " × ".join(f"{v:g}" for v in data["extents_mm"])
+    lines.append(f"| {name} | Yes | Yes | {data['step_solids']} | {ext} |")
+lines += [
+    "",
+    f"Assembled body/lid interference volume: **{interference_volume:.6f} mm³**.",
+    "",
+    "Conservative fused-block, unfused-busbar, and body envelopes have zero intersection above the mounting risers.",
+    "",
+    "Checks performed: watertightness, winding consistency, positive volume, 3MF package structure and millimeter units, STL/3MF extent agreement, STEP re-import, the 146 × 96 × 52 mm body envelope, body/lid interference, and power-block envelope clearance.",
+]
+(RELEASE_DIR / "VALIDATION.md").write_text("\n".join(lines) + "\n")
+
+hash_lines = []
+hash_paths = []
+for directory in (STL_DIR, MF3_DIR, STEP_DIR, REPO / "CAD/CadQuery"):
+    hash_paths.extend(p for p in directory.iterdir() if p.is_file())
+for path in sorted(hash_paths):
+    digest = hashlib.sha256(path.read_bytes()).hexdigest()
+    hash_lines.append(f"{digest}  {path.relative_to(REPO)}")
+(RELEASE_DIR / "REPOSITORY_SHA256SUMS.txt").write_text("\n".join(hash_lines) + "\n")
+
+print(json.dumps(results, indent=2))

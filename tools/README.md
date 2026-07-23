@@ -24,3 +24,10 @@ For the current R0.7 release, use:
 python tools/validate_release_r07.py
 python tools/render_preview_r07.py
 ```
+
+For the current R0.8 release, use:
+
+```text
+python tools/validate_release_r08.py
+python tools/render_preview_r08.py
+```

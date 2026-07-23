@@ -2,7 +2,22 @@
 
 ## [Unreleased]
 
-- Physical fit testing of the R0.7 USB-C and power-block coupons.
+- Physical fit testing of the R0.8 USB-C coupon and full enclosure.
+
+## [R0.8] — 2026-07-22
+
+### Changed
+
+- Refactored both USB-C openings around the received 12.70 × 6.35 mm pass-through body and 25.40 × 7.62 mm rounded flange.
+- Enlarged the enclosure from 140 × 90 × 52 mm to 146 × 96 × 52 mm so the covered unfused busbar and Blue Sea 5045 can mount side-by-side.
+- Replaced provisional unfused-busbar slots with fixed mounting holes at the physically measured 114.30 mm centers.
+- Relocated the lid posts and internal tie-downs to clear both power-block envelopes.
+- Removed obsolete PCB-backed USB shelves; the received interfaces are cable-backed fittings.
+
+### Added
+
+- Three-position USB-C fit coupon using 18.80, 19.05, and 19.30 mm screw-center variants.
+- Automated conservative-envelope clearance checks for both power blocks and the enclosure.
 
 ## [R0.7] — 2026-07-22
 
