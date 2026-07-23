@@ -1,10 +1,10 @@
-# Mechanical Design Specification — Mk I R0.10 USB-PD Carrier
+# Mechanical Design Specification — Mk I R0.11 Tall Swapped-Block Body
 
 ## Identification and scope
 
 - Product: Mission Communications Hub
 - Marking: `Mission Communications Hub / Mk I / GAWG CAP`
-- Revision: R0.10 USB-PD carrier
+- Revision: R0.11 tall swapped-block body
 - Function: portable power-interface enclosure for Peplink MAX BR1 Pro 5G and Starlink Mini
 - External source: Anker SOLIX C200 DC or equivalent USB-C PD source
 
@@ -12,9 +12,9 @@ The enclosure does not contain the Peplink, Starlink Mini, iPad, battery, or cer
 
 ## Envelope and construction
 
-| Feature | R0.10 value |
+| Feature | R0.11 value |
 |---|---:|
-| Body envelope | 146 × 96 × 52 mm |
+| Body envelope | 146 × 96 × 103 mm |
 | Wall thickness | 3.0 mm |
 | Bottom thickness | 3.2 mm |
 | External corner radius | 6.0 mm |
@@ -25,10 +25,13 @@ The enclosure does not contain the Peplink, Starlink Mini, iPad, battery, or cer
 
 The body and lid are separate, serviceable printed parts. R0.3 corrected the inherited locating-lip interference and added clearance pockets around the body’s corner bosses. Automated assembly checking reports 0 mm³ body/lid interference.
 
+R0.11 adds 51 mm (approximately 2 inches) of body height after physical fitting established that the switch extends 38.10 mm into the enclosure. The panel centerline moves from 26 mm to 77 mm above the base.
+
 ## Control face
 
 - Power switch nominal body: 38.10 × 20.32 mm
 - Switch cutout: 38.55 × 20.77 mm
+- Measured switch inward depth: 38.10 mm
 - Voltmeter nominal supplied size: 45.72 × 27.94 mm
 - Fit-tested R0.5/R0.6 voltmeter cutout: 45.17 × 26.39 mm
 - Outside control labels: `VOLTAGE` and `POWER`
@@ -73,18 +76,18 @@ The smallest R0.5 wire-coupon opening fit correctly. The first strain-relief cha
 - Unfused busbar mounting-hole diameter in R0.8: 5.5 mm
 - Four zip-tie tabs occupy the clear channel between the power blocks
 
-The Blue Sea 5045 coupon uses 65.1 mm centers. R0.9 mounts the received unfused busbar at its confirmed 120.65 mm centers. The 146 × 96 mm enclosure, relocated lid posts, and cable-backed USB layout are retained from R0.8.
+R0.11 places the Blue Sea 5045 at Y=+22.1 mm in the I/O half and the unfused busbar at Y=−24.95 mm in the control half. Tall lid posts move to Y=0 and +39 mm, with X=±66 mm keeping them outside the fused-block footprint.
 
 ## USB-PD carrier
 
-- The R0.9 body is unchanged.
-- A 114 × 30 × 2.4 mm removable carrier mounts under the R0.10 lid.
+- The carrier geometry is unchanged from R0.10 and may be reused.
+- A 114 × 30 × 2.4 mm removable carrier mounts under the R0.11 lid.
 - Four blind 4.6 mm M3 insert pilots are arranged on 106 × 22 mm centers.
 - Each open-ended bay accepts a 45.72 × 17.78 mm envelope, including the reported solder projection.
 - Board centers are X = −27 mm and +27 mm, Y = +25 mm.
 - The battery PD sink/trigger occupies the left bay; the Starlink PD source occupies the right bay.
 - Two zip ties retain each card without assuming a PCB mounting-hole pattern.
-- With a conservative 8 mm total card/component depth, automated validation reports 4.84 mm vertical clearance above the unfused-busbar cover.
+- With a conservative 8 mm total card/component depth, automated validation reports 48.70 mm vertical clearance above the taller power-block envelope.
 
 ## Material and printing
 
@@ -112,17 +115,19 @@ No CAP seal or insignia is included.
 
 ## Validation
 
-R0.10 passed automated checks for:
+R0.11 passed automated checks for:
 
 - watertight STL and 3MF meshes
 - consistent mesh winding and positive volume
 - millimeter-unit 3MF package structure
 - matching STL and 3MF extents
 - successful STEP solid re-import
-- exact 146 × 96 × 52 mm body envelope
+- exact 146 × 96 × 103 mm body envelope
 - zero body/lid intersection when assembled
 - zero conservative-envelope intersection between either power block and the body or the other block
 - zero installed-carrier intersection with the body or either power block
 - zero conservative PD-card-envelope intersection with the body or either power block
+- zero intersection between the 38.10 mm-deep switch envelope and either power block
+- 24.405 mm vertical clearance between the lowest control opening and the taller conservative power-block envelope
 
 Automated validation does not replace physical fit, load, thermal, vibration, restraint, or electrical testing.

@@ -2,7 +2,22 @@
 
 ## [Unreleased]
 
-- Full mechanical assembly, wiring, thermal, load, and restraint testing of the R0.10 carrier configuration.
+- Full mechanical assembly, wiring, thermal, load, and restraint testing of the R0.11 tall-body configuration.
+
+## [R0.11] — 2026-07-23
+
+### Switch-clearance correction
+
+- Recorded the physical switch’s 38.10 mm inward projection and the resulting R0.10 fused-block collision.
+- Increased body height from 52 mm to 103 mm, adding approximately 2 inches.
+- Moved the Blue Sea 5045 fused block to the I/O half.
+- Moved the covered unfused bus bar to the control half.
+- Raised the switch, voltmeter, and both USB-C interfaces to a 77 mm centerline.
+- Moved the tall lid posts to the I/O half, outside the fused-block footprint.
+- Added a second tier of side ventilation.
+- Preserved the validated control cutouts, USB interfaces, Peplink exit, strain relief, and dual-card carrier.
+- Validated zero intersection between the 38.10 mm-deep switch envelope and either power block.
+- Validated 24.405 mm between the lowest control opening and the conservative power-block envelopes.
 
 ## [R0.10] — 2026-07-23
 

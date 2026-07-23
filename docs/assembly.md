@@ -1,10 +1,10 @@
-# Assembly Guide — Mk I R0.10 USB-PD Carrier
+# Assembly Guide — Mk I R0.11 Tall Swapped-Block Body
 
 ## 1. Print and verify coupons
 
 Use the intended PETG-CF profile for all coupons.
 
-1. Print `MCH-MkI_control_fit_coupon_R0.10.3mf` if the verified control dimensions need reconfirmation on a different printer profile.
+1. Print `MCH-MkI_control_fit_coupon_R0.11.3mf` if the verified control dimensions need reconfirmation on a different printer profile.
 2. Confirm the switch snaps or seats without distorting the coupon.
 3. Confirm the voltmeter fits the 45.17 × 26.39 mm opening without rattle or excessive force.
 4. The final USB-C interface uses confirmed 18.55 mm screw centers. Reprint the final coupon only if the printer profile changes.
@@ -12,21 +12,21 @@ Use the intended PETG-CF profile for all coupons.
 6. Print the Blue Sea 5045 fused-block coupon and verify both risers at 65.1 mm centers.
 7. The final unfused-busbar coupon and body use confirmed 120.65 mm centers and 5.5 mm mounting holes.
 
-The R0.10 body is geometrically unchanged from R0.9. A body already printing does not need to be replaced.
+Do not use the R0.9/R0.10 body for the final hardware layout. Its lower controls conflict with the 38.10 mm-deep switch.
 
 ## 2. Print the enclosure
 
 - Print the body upright.
 - Print the clamp flat.
 - Print the lid branding-up with support under the broad center panel, or trial a long-edge orientation with a brim.
-- Print the USB-PD carrier with its guide rails upward.
+- Reuse an R0.10 USB-PD carrier if already printed; otherwise print the R0.11 carrier with its guide rails upward.
 - Inspect every screw boss, cable-contact edge, panel recess, and locating lip before assembly.
 
 ## 3. Install threaded hardware
 
 1. Prove the selected M3 heat-set insert pilot on scrap PETG-CF.
 2. Install the four enclosure-lid inserts square to the boss faces.
-3. Install four additional M3 inserts into the blind USB-PD carrier bosses under the R0.10 lid.
+3. Install four additional M3 inserts into the blind USB-PD carrier bosses under the R0.11 lid.
 4. Stop the carrier inserts flush with the boss bottoms; do not force them toward the branded surface.
 5. Install the two strain-relief inserts using the verified method.
 6. Verify the chosen Blue Sea 5045 mounting method before modifying the 3.6 mm pilots.
@@ -39,12 +39,12 @@ Allow inserts to cool before installing screws.
 2. Install the two USB-C panel connectors on the I/O face.
 3. Route the Peplink bonded pair through its exit.
 4. Fit the printed clamp with its 4.55 × 2.70 mm channel and tighten only enough to prevent movement; do not flatten or cut the insulation.
-5. Place the Blue Sea 5045 on its 65.1 mm mounting centers.
+5. Place the Blue Sea 5045 on the I/O-side 65.1 mm mounting centers.
 6. Install the battery-input PD sink/trigger card in the carrier's left bay with two small zip ties.
 7. Install the Starlink-output PD source card in the right bay with two small zip ties.
 8. Attach the populated carrier to the lid's four blind bosses with M3 screws that do not bottom in the inserts.
 9. Route dummy cable through the body tie-downs and leave enough service loop to raise the lid.
-10. Install the unfused busbar on its confirmed 120.65 mm bosses and verify the cover clears the body, lid posts, central cable channel, and populated carrier.
+10. Install the unfused busbar on the control-side 120.65 mm bosses and verify the cover clears the body, relocated lid posts, central cable channel, and populated carrier.
 
 ## 5. Lid fit
 
@@ -54,6 +54,7 @@ Allow inserts to cool before installing screws.
 4. Confirm no screw bottoms out and no printed boss cracks.
 5. Confirm the carrier guides and USB-PD cards face downward into the enclosure.
 6. Confirm no solder joint, component, or wire is compressed when the lid is seated.
+7. Verify the switch’s rear body and terminals remain clear of the unfused bus bar before wiring.
 
 ## 6. Electrical integration hold point
 

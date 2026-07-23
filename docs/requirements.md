@@ -1,10 +1,10 @@
-# Mk I R0.10 USB-PD Carrier Requirements
+# Mk I R0.11 Tall Swapped-Block Body Requirements
 
 Requirement identifiers remain stable. Retired conceptual requirements are preserved and not reassigned.
 
 ## Mechanical
 
-- MCH-M-001: The R0.10 body shall measure 146 × 96 × 52 mm and remain geometrically compatible with R0.9.
+- MCH-M-001: The R0.11 body shall measure 146 × 96 × 103 mm.
 - MCH-M-002: The enclosure shall use a separate body and removable locating-lip lid.
 - MCH-M-003: Lid service points shall use M3 machine-screw positions suitable for inserts.
 - MCH-M-004: **Retired** — removable electronics sled.
@@ -21,9 +21,12 @@ Requirement identifiers remain stable. Retired conceptual requirements are prese
 - MCH-M-015: The unfused busbar shall mount at the physically confirmed 120.65 mm centers.
 - MCH-M-016: The covered unfused busbar and Blue Sea 5045 envelopes shall not intersect the body or each other above their mounting risers.
 - MCH-M-017: A removable lid-mounted carrier shall retain two 45.72 × 17.78 mm USB-PD card envelopes.
-- MCH-M-018: The carrier shall use four M3 fasteners into blind lid bosses and shall not require reprinting the R0.9 body.
+- MCH-M-018: The carrier shall use four M3 fasteners into blind lid bosses and remain reusable from R0.10.
 - MCH-M-019: Each PD card shall use two independent zip-tie retention points.
 - MCH-M-020: Conservative 8 mm-deep PD-card envelopes shall not intersect the body, fused block, or unfused busbar.
+- MCH-M-021: The Blue Sea 5045 shall occupy the I/O half and the unfused busbar shall occupy the control half.
+- MCH-M-022: The switch, voltmeter, and USB-C interface centerline shall be 77 mm above the base.
+- MCH-M-023: A 38.10 mm-deep switch envelope shall not intersect either conservative power-block envelope.
 
 ## Printing and release
 

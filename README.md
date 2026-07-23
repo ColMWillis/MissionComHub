@@ -2,15 +2,15 @@
 
 **Branding:** Mission Communications Hub / Mk I / GAWG CAP
 
-**Current mechanical revision:** R0.10 USB-PD carrier
+**Current mechanical revision:** R0.11 tall swapped-block body
 
 MissionComHub is an experimental portable power-interface enclosure for a Peplink MAX BR1 Pro 5G and Starlink Mini using an Anker SOLIX C200 DC or equivalent USB-C PD source. It is designed for temporary CAP aircraft, ground-vehicle, and mission-base use.
 
-![Mission Communications Hub R0.10 preview](images/R0.10_preview.png)
+![Mission Communications Hub R0.11 preview](images/R0.11_preview.png)
 
-## R0.10 configuration
+## R0.11 configuration
 
-- 146 × 96 × 52 mm PETG-CF body, minimally enlarged for both received power blocks
+- 146 × 96 × 103 mm PETG-CF body
 - Separate 4 mm serviceable lid with locating lip and raised branding
 - Power switch opening: 38.55 × 20.77 mm
 - Fit-tested voltmeter opening: 45.17 × 26.39 mm
@@ -31,20 +31,24 @@ MissionComHub is an experimental portable power-interface enclosure for a Peplin
 - Revised lid with four blind M3 insert bosses
 - Removable 114 × 30 mm carrier for two USB-PD cards
 - Open-ended card guides and two zip ties per card
-- Documented battery-input and Starlink-output card placement above the bus bar
+- Documented battery-input and Starlink-output card placement under the lid
+- Blue Sea 5045 moved to the I/O half
+- Unfused bus bar moved to the control half
+- Switch, voltmeter, and USB-C interfaces raised to a 77 mm centerline
+- Explicit clearance validation for the switch’s measured 38.10 mm inward depth
 
-R0.10 keeps the R0.9 body unchanged and adds a serviceable dual-card carrier under the lid. A body already printing from R0.9 remains compatible; only the R0.10 lid and carrier are needed for the new mounting system.
+R0.11 replaces the R0.9/R0.10 body after the physical switch was found to project 38.10 mm inward and collide with the fused block. The body gains 51 mm of height, the two power blocks exchange sides, and the control/USB interfaces move into the new upper section. The R0.10 carrier may be reused, but the body and lid must use the R0.11 pair.
 
 ## Download and print
 
-- Complete package: [`releases/R0.10/MissionComHub_MkI_Enclosure_R0.10.zip`](releases/R0.10/MissionComHub_MkI_Enclosure_R0.10.zip)
-- 3MF files: [`CAD/3MF/R0.10`](CAD/3MF/R0.10)
-- STL files: [`CAD/STL/R0.10`](CAD/STL/R0.10)
-- STEP files: [`CAD/STEP/R0.10`](CAD/STEP/R0.10)
-- Parametric CadQuery generator: [`CAD/CadQuery/make_mch_mk1_r10.py`](CAD/CadQuery/make_mch_mk1_r10.py)
-- Dimensions, placement map, and validation: [`CAD/Releases/R0.10`](CAD/Releases/R0.10)
+- Complete package: [`releases/R0.11/MissionComHub_MkI_Enclosure_R0.11.zip`](releases/R0.11/MissionComHub_MkI_Enclosure_R0.11.zip)
+- 3MF files: [`CAD/3MF/R0.11`](CAD/3MF/R0.11)
+- STL files: [`CAD/STL/R0.11`](CAD/STL/R0.11)
+- STEP files: [`CAD/STEP/R0.11`](CAD/STEP/R0.11)
+- Parametric CadQuery generator: [`CAD/CadQuery/make_mch_mk1_r11.py`](CAD/CadQuery/make_mch_mk1_r11.py)
+- Dimensions, placement map, and validation: [`CAD/Releases/R0.11`](CAD/Releases/R0.11)
 
-If the R0.9 body is already printing, keep it. Print the R0.10 lid and dual USB-PD card carrier.
+Print the R0.11 body and lid. Reuse the R0.10 carrier and strain-relief clamp if they are already printed.
 
 ## Suggested prototype settings
 
@@ -59,7 +63,7 @@ The branded lid needs slicer support beneath its center when printed branding-up
 
 ## Validation status
 
-Every R0.10 STL and 3MF is watertight with consistent winding. STEP files re-import as valid solids, STL and 3MF dimensions agree, body/lid interference is 0 mm³, and the installed carrier plus conservative 8 mm-deep card envelopes clear the body and both power blocks. The conservative vertical clearance above the bus-bar cover is 4.84 mm.
+Every R0.11 STL and 3MF is watertight with consistent winding. STEP files re-import as valid solids, STL and 3MF dimensions agree, body/lid interference is 0 mm³, and the switch, carrier, cards, body, and both swapped power blocks pass conservative clearance checks. The lowest control opening is 24.405 mm above the power-block envelopes.
 
 ## Repository layout
 

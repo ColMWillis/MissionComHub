@@ -1,0 +1,249 @@
+{
+  "revision": "R0.11",
+  "files": {
+    "MCH-MkI_BlueSea5045_fused_block_riser_coupon_R0.11": {
+      "faces": 2124,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        100.0,
+        52.0,
+        9.2
+      ],
+      "mesh_volume_mm3": 17405.63,
+      "step_solids": 1,
+      "step_volume_mm3": 17406.2,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    },
+    "MCH-MkI_USB-C_final_fit_coupon_R0.11": {
+      "faces": 2192,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        36.0,
+        34.0,
+        3.2
+      ],
+      "mesh_volume_mm3": 3513.56,
+      "step_solids": 1,
+      "step_volume_mm3": 3513.53,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    },
+    "MCH-MkI_body_R0.11": {
+      "faces": 27032,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        146.0,
+        96.0,
+        103.0
+      ],
+      "mesh_volume_mm3": 205118.07,
+      "step_solids": 1,
+      "step_volume_mm3": 205137.31,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    },
+    "MCH-MkI_control_fit_coupon_R0.11": {
+      "faces": 484,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        105.0,
+        42.0,
+        3.2
+      ],
+      "mesh_volume_mm3": 7710.52,
+      "step_solids": 1,
+      "step_volume_mm3": 7710.57,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    },
+    "MCH-MkI_dual_USB-PD_card_carrier_R0.11": {
+      "faces": 10356,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        114.0,
+        30.0,
+        4.0
+      ],
+      "mesh_volume_mm3": 8276.44,
+      "step_solids": 1,
+      "step_volume_mm3": 8276.42,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    },
+    "MCH-MkI_lid_R0.11": {
+      "faces": 32462,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        146.0,
+        96.0,
+        9.3
+      ],
+      "mesh_volume_mm3": 59438.37,
+      "step_solids": 1,
+      "step_volume_mm3": 59438.95,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    },
+    "MCH-MkI_peplink_strain_relief_R0.11": {
+      "faces": 1192,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        18.0,
+        10.0,
+        3.6
+      ],
+      "mesh_volume_mm3": 507.71,
+      "step_solids": 1,
+      "step_volume_mm3": 507.64,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    },
+    "MCH-MkI_unfused_busbar_riser_coupon_R0.11": {
+      "faces": 2124,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        139.16,
+        44.1,
+        9.2
+      ],
+      "mesh_volume_mm3": 20877.38,
+      "step_solids": 1,
+      "step_volume_mm3": 20878.24,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    },
+    "MCH-MkI_wire_exit_fit_coupon_R0.11": {
+      "faces": 1800,
+      "watertight": true,
+      "winding_consistent": true,
+      "extents_mm": [
+        60.0,
+        25.0,
+        3.2
+      ],
+      "mesh_volume_mm3": 4676.64,
+      "step_solids": 1,
+      "step_volume_mm3": 4676.67,
+      "3mf_unit": "millimeter",
+      "3mf_matches_stl_extents": true
+    }
+  },
+  "voltmeter_cutout_mm": [
+    45.17,
+    26.39
+  ],
+  "peplink_wire_exit_mm": [
+    4.1,
+    2.4
+  ],
+  "peplink_strain_channel_mm": [
+    4.55,
+    2.7
+  ],
+  "usb_c_panel_extension": {
+    "measured_pass_through_mm": [
+      12.7,
+      6.35
+    ],
+    "flange_mm": [
+      25.4,
+      7.62
+    ],
+    "flange_recess_mm": [
+      25.8,
+      8.02,
+      0.8
+    ],
+    "connector_cutout_mm": [
+      13.2,
+      6.85
+    ],
+    "mount_hole_ctc_mm": 18.55,
+    "mount_hole_diameter_mm": 2.8
+  },
+  "unfused_busbar": {
+    "cover_envelope_mm": [
+      137.16,
+      38.1,
+      22.86
+    ],
+    "base_length_mm": 119.38,
+    "mount_recess_diameter_mm": 10.16,
+    "measured_mount_centers_mm": 120.65,
+    "mount_hole_diameter_mm": 5.5,
+    "body_boss_center_mm": [
+      0.0,
+      -24.95
+    ],
+    "status": "confirmed_physical_fit"
+  },
+  "pd_card_carrier": {
+    "card_count": 2,
+    "card_envelope_each_mm": [
+      45.72,
+      17.78
+    ],
+    "carrier_mm": [
+      114.0,
+      30.0,
+      2.4
+    ],
+    "carrier_center_in_enclosure_xy_mm": [
+      0.0,
+      25.0
+    ],
+    "card_centers_in_enclosure_xy_mm": [
+      [
+        -27.0,
+        25.0
+      ],
+      [
+        27.0,
+        25.0
+      ]
+    ],
+    "guide_clearance_total_mm": 0.6,
+    "retention": "two_zip_ties_per_card",
+    "lid_mount_centers_local_mm": [
+      106.0,
+      22.0
+    ],
+    "lid_boss_height_mm": 4.5,
+    "m3_insert_pilot_diameter_mm": 4.6,
+    "m3_insert_depth_mm": 4.0,
+    "carrier_clearance_hole_diameter_mm": 3.4,
+    "assumed_max_card_assembly_depth_mm": 8.0
+  },
+  "assembled_body_lid_interference_mm3": 0.0,
+  "power_block_envelope_interference_mm3": {
+    "fused_block_to_body_mm3": 0.0,
+    "unfused_busbar_to_body_mm3": 0.0,
+    "between_power_blocks_mm3": 0.0
+  },
+  "switch_power_block_interference_mm3": {
+    "switch_to_fused_block_mm3": 0.0,
+    "switch_to_unfused_busbar_mm3": 0.0
+  },
+  "lowest_control_opening_to_power_block_vertical_clearance_mm": 24.405,
+  "installed_pd_carrier_interference_mm3": {
+    "carrier_to_body_mm3": 0.0,
+    "carrier_to_busbar_mm3": 0.0,
+    "carrier_to_fused_block_mm3": 0.0
+  },
+  "pd_card_envelope_interference_mm3": {
+    "cards_to_body_mm3": 0.0,
+    "cards_to_busbar_mm3": 0.0,
+    "cards_to_fused_block_mm3": 0.0
+  },
+  "pd_card_to_busbar_vertical_clearance_mm": 55.84,
+  "pd_card_to_power_blocks_vertical_clearance_mm": 48.7
+}

@@ -1,0 +1,162 @@
+{
+  "revision": "R0.11",
+  "enclosure_mm": [
+    146.0,
+    96.0,
+    103.0
+  ],
+  "wall_mm": 3.0,
+  "lid": {
+    "plate_thickness_mm": 4.0,
+    "lip_depth_mm": 3.5,
+    "lip_outer_mm": [
+      139.3,
+      89.3
+    ],
+    "lip_ring_thickness_mm": 2.0,
+    "body_opening_mm": [
+      140.0,
+      90.0
+    ],
+    "clearance_each_side_mm": 0.35
+  },
+  "switch_user_size_mm": [
+    38.1,
+    20.32
+  ],
+  "switch_cutout_mm": [
+    38.55,
+    20.77
+  ],
+  "voltmeter_user_size_mm": [
+    45.72,
+    27.94
+  ],
+  "voltmeter_cutout_mm": [
+    45.17,
+    26.39
+  ],
+  "voltmeter_reduction_from_r03_total_mm": [
+    1.0,
+    2.0
+  ],
+  "voltmeter_change_from_r04_mm": [
+    1.0,
+    0.0
+  ],
+  "control_layout": {
+    "panel_center_z_mm": 77.0,
+    "switch_inward_depth_mm": 38.099999999999994,
+    "switch_center_x_mm": 30.0,
+    "voltmeter_center_x_mm": -29.0,
+    "control_face_y_mm": -48.0
+  },
+  "pd_board_mm": [
+    17.78,
+    43.18,
+    2.54
+  ],
+  "pd_card_carrier": {
+    "card_count": 2,
+    "card_envelope_each_mm": [
+      45.72,
+      17.78
+    ],
+    "carrier_mm": [
+      114.0,
+      30.0,
+      2.4
+    ],
+    "carrier_center_in_enclosure_xy_mm": [
+      0.0,
+      25.0
+    ],
+    "card_centers_in_enclosure_xy_mm": [
+      [
+        -27.0,
+        25.0
+      ],
+      [
+        27.0,
+        25.0
+      ]
+    ],
+    "guide_clearance_total_mm": 0.6,
+    "retention": "two_zip_ties_per_card",
+    "lid_mount_centers_local_mm": [
+      106.0,
+      22.0
+    ],
+    "lid_boss_height_mm": 4.5,
+    "m3_insert_pilot_diameter_mm": 4.6,
+    "m3_insert_depth_mm": 4.0,
+    "carrier_clearance_hole_diameter_mm": 3.4,
+    "assumed_max_card_assembly_depth_mm": 8.0
+  },
+  "usb_c_panel_extension": {
+    "measured_pass_through_mm": [
+      12.7,
+      6.35
+    ],
+    "flange_mm": [
+      25.4,
+      7.62
+    ],
+    "flange_recess_mm": [
+      25.8,
+      8.02,
+      0.8
+    ],
+    "connector_cutout_mm": [
+      13.2,
+      6.85
+    ],
+    "mount_hole_ctc_mm": 18.55,
+    "mount_hole_diameter_mm": 2.8
+  },
+  "blue_sea_5045": {
+    "overall_mm": [
+      92.5,
+      43.8
+    ],
+    "mounting_centers_mm": 65.1,
+    "boss_center_mm": [
+      8.0,
+      22.1
+    ],
+    "pilot_diameter_mm": 3.6
+  },
+  "unfused_busbar": {
+    "cover_envelope_mm": [
+      137.16,
+      38.1,
+      22.86
+    ],
+    "base_length_mm": 119.38,
+    "mount_recess_diameter_mm": 10.16,
+    "measured_mount_centers_mm": 120.65,
+    "mount_hole_diameter_mm": 5.5,
+    "body_boss_center_mm": [
+      0.0,
+      -24.95
+    ],
+    "status": "confirmed_physical_fit"
+  },
+  "power_block_layout": "swapped_in_R0.11_busbar_control_half_fused_block_io_half",
+  "peplink_bonded_cable_mm": [
+    3.81,
+    2.03
+  ],
+  "peplink_wire_exit_mm": [
+    4.1,
+    2.4
+  ],
+  "peplink_strain_channel_mm": [
+    4.55,
+    2.7
+  ],
+  "peplink_r06_strain_channel_increase_total_mm": [
+    0.5,
+    0.5
+  ]
+}
