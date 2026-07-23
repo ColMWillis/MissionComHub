@@ -1,0 +1,26 @@
+{
+  "name": "MCH-MkI_USB-C_panel_fit_coupon_18.55mm_R0.8C",
+  "plate_mm": [
+    36.0,
+    34.0,
+    3.2
+  ],
+  "screw_centers_mm": 18.55,
+  "connector_cutout_mm": [
+    13.2,
+    6.85
+  ],
+  "flange_recess_mm": [
+    25.8,
+    8.02,
+    0.8
+  ],
+  "screw_hole_diameter_mm": 2.8,
+  "watertight": true,
+  "winding_consistent": true,
+  "extents_mm": [
+    36.0,
+    34.0,
+    3.2
+  ]
+}

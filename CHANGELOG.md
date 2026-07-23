@@ -2,9 +2,9 @@
 
 ## [Unreleased]
 
-- Added two focused R0.8B fit coupons; the R0.8 body remains unchanged pending their results.
-- The USB-C coupon provides engraved 18.65 mm and 18.60 mm screw-center positions after 18.70 mm remained slightly too wide.
-- The unfused-busbar coupon moves its mounting holes 0.25 inch farther apart, from 114.30 mm to 120.65 mm centers.
+- Confirmed the unfused-busbar fit at 120.65 mm (4.75 inch) mounting centers.
+- Added a single-position R0.8C USB-C coupon at 18.55 mm after 18.60 mm remained just outside tolerance.
+- The R0.8 body remains unchanged until the 18.55 mm USB fit is confirmed; the next body revision will incorporate both final values.
 
 ## [R0.8] — 2026-07-22
 

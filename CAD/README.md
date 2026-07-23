@@ -33,4 +33,8 @@ All three export formats were generated from the same CadQuery source. The compl
 
 Both measurements are engraved on their coupons. The enclosure body remains at the R0.8 dimensions until physical coupon testing identifies the final values.
 
+## R0.8C USB-C refinement coupon
+
+`MCH-MkI_USB-C_panel_fit_coupon_18.55mm_R0.8C` is a compact single-position coupon at 18.55 mm screw centers. The accepted busbar value is now 120.65 mm; the enclosure body will be updated after this USB fit is confirmed.
+
 Do not alter a mesh export without updating the parametric source and regenerating every synchronized format.

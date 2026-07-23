@@ -13,6 +13,7 @@ The unfused-bus body and coupon use the physically measured 114.30 mm mounting c
 | Part | Watertight | STL/3MF match | STEP solids | Extents (mm) |
 |---|---:|---:|---:|---|
 | MCH-MkI_BlueSea5045_fused_block_riser_coupon_R0.8 | Yes | Yes | 1 | 100 × 52 × 9.2 |
+| MCH-MkI_USB-C_panel_fit_coupon_18.55mm_R0.8C | Yes | Yes | 1 | 36 × 34 × 3.2 |
 | MCH-MkI_USB-C_panel_fit_coupon_18.60-18.65_R0.8B | Yes | Yes | 1 | 68 × 34 × 3.2 |
 | MCH-MkI_USB-C_panel_fit_coupon_18.70-18.75_R0.8A | Yes | Yes | 1 | 68 × 34 × 3.2 |
 | MCH-MkI_USB-C_panel_fit_coupon_R0.8 | Yes | Yes | 1 | 94 × 34 × 3.2 |
