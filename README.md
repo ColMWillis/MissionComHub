@@ -2,13 +2,13 @@
 
 **Branding:** Mission Communications Hub / Mk I / GAWG CAP
 
-**Current mechanical revision:** R0.9 final draft
+**Current mechanical revision:** R0.10 USB-PD carrier
 
 MissionComHub is an experimental portable power-interface enclosure for a Peplink MAX BR1 Pro 5G and Starlink Mini using an Anker SOLIX C200 DC or equivalent USB-C PD source. It is designed for temporary CAP aircraft, ground-vehicle, and mission-base use.
 
-![Mission Communications Hub R0.9 preview](images/R0.9_preview.png)
+![Mission Communications Hub R0.10 preview](images/R0.10_preview.png)
 
-## R0.9 final-draft configuration
+## R0.10 configuration
 
 - 146 × 96 × 52 mm PETG-CF body, minimally enlarged for both received power blocks
 - Separate 4 mm serviceable lid with locating lip and raised branding
@@ -28,19 +28,23 @@ MissionComHub is an experimental portable power-interface enclosure for a Peplin
 - Blue Sea 5045 fused-block riser coupon
 - Full-envelope unfused-busbar riser coupon with fixed 120.65 mm centers
 - Final engraved USB-C coupon at 18.55 mm centers
+- Revised lid with four blind M3 insert bosses
+- Removable 114 × 30 mm carrier for two USB-PD cards
+- Open-ended card guides and two zip ties per card
+- Documented battery-input and Starlink-output card placement above the bus bar
 
-R0.9 incorporates the completed coupon-testing results into the production body. It preserves the verified controls, Peplink exit, strain relief, exterior labels, serviceable lid, received USB geometry, and side-by-side power-block layout. Full assembly testing is the remaining gate before R1.0.
+R0.10 keeps the R0.9 body unchanged and adds a serviceable dual-card carrier under the lid. A body already printing from R0.9 remains compatible; only the R0.10 lid and carrier are needed for the new mounting system.
 
 ## Download and print
 
-- Complete package: [`releases/R0.9/MissionComHub_MkI_Enclosure_R0.9.zip`](releases/R0.9/MissionComHub_MkI_Enclosure_R0.9.zip)
-- 3MF files: [`CAD/3MF/R0.9`](CAD/3MF/R0.9)
-- STL files: [`CAD/STL/R0.9`](CAD/STL/R0.9)
-- STEP files: [`CAD/STEP/R0.9`](CAD/STEP/R0.9)
-- Parametric CadQuery generator: [`CAD/CadQuery/make_mch_mk1_r09.py`](CAD/CadQuery/make_mch_mk1_r09.py)
-- Dimensions and validation: [`CAD/Releases/R0.9`](CAD/Releases/R0.9)
+- Complete package: [`releases/R0.10/MissionComHub_MkI_Enclosure_R0.10.zip`](releases/R0.10/MissionComHub_MkI_Enclosure_R0.10.zip)
+- 3MF files: [`CAD/3MF/R0.10`](CAD/3MF/R0.10)
+- STL files: [`CAD/STL/R0.10`](CAD/STL/R0.10)
+- STEP files: [`CAD/STEP/R0.10`](CAD/STEP/R0.10)
+- Parametric CadQuery generator: [`CAD/CadQuery/make_mch_mk1_r10.py`](CAD/CadQuery/make_mch_mk1_r10.py)
+- Dimensions, placement map, and validation: [`CAD/Releases/R0.10`](CAD/Releases/R0.10)
 
-The coupon dimensions are now confirmed. Print the R0.9 body, lid, and strain-relief clamp for the full assembly draft.
+If the R0.9 body is already printing, keep it. Print the R0.10 lid and dual USB-PD card carrier.
 
 ## Suggested prototype settings
 
@@ -55,7 +59,7 @@ The branded lid needs slicer support beneath its center when printed branding-up
 
 ## Validation status
 
-Every R0.9 STL and 3MF is watertight with consistent winding. STEP files re-import as valid solids, STL and 3MF dimensions agree, the body envelope is exactly 146 × 96 × 52 mm, assembled body/lid interference is 0 mm³, and conservative power-block envelopes have zero interference with the body or each other.
+Every R0.10 STL and 3MF is watertight with consistent winding. STEP files re-import as valid solids, STL and 3MF dimensions agree, body/lid interference is 0 mm³, and the installed carrier plus conservative 8 mm-deep card envelopes clear the body and both power blocks. The conservative vertical clearance above the bus-bar cover is 4.84 mm.
 
 ## Repository layout
 

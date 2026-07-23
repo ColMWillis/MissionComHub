@@ -2,7 +2,19 @@
 
 ## [Unreleased]
 
-- Full mechanical assembly, wiring, thermal, load, and restraint testing of the R0.9 final draft.
+- Full mechanical assembly, wiring, thermal, load, and restraint testing of the R0.10 carrier configuration.
+
+## [R0.10] — 2026-07-23
+
+### USB-PD card placement
+
+- Preserved the complete R0.9 body geometry for compatibility with the body already being printed.
+- Added four blind M3 heat-set-insert bosses to the underside of the lid.
+- Added a removable 114 × 30 mm carrier for two 45.72 × 17.78 mm USB-PD card envelopes.
+- Added open-ended locating rails and two zip-tie retention points per card.
+- Assigned the left bay to the battery PD sink/trigger and the right bay to the Starlink PD source.
+- Added a dimensioned placement and wiring map.
+- Validated zero interference with the body and both power blocks, including conservative 8 mm-deep card envelopes.
 
 ## [R0.9] — 2026-07-23
 

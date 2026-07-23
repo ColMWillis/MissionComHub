@@ -1,10 +1,10 @@
-# Mechanical Design Specification — Mk I R0.9 Final Draft
+# Mechanical Design Specification — Mk I R0.10 USB-PD Carrier
 
 ## Identification and scope
 
 - Product: Mission Communications Hub
 - Marking: `Mission Communications Hub / Mk I / GAWG CAP`
-- Revision: R0.9 final draft
+- Revision: R0.10 USB-PD carrier
 - Function: portable power-interface enclosure for Peplink MAX BR1 Pro 5G and Starlink Mini
 - External source: Anker SOLIX C200 DC or equivalent USB-C PD source
 
@@ -12,7 +12,7 @@ The enclosure does not contain the Peplink, Starlink Mini, iPad, battery, or cer
 
 ## Envelope and construction
 
-| Feature | R0.7 value |
+| Feature | R0.10 value |
 |---|---:|
 | Body envelope | 146 × 96 × 52 mm |
 | Wall thickness | 3.0 mm |
@@ -75,6 +75,17 @@ The smallest R0.5 wire-coupon opening fit correctly. The first strain-relief cha
 
 The Blue Sea 5045 coupon uses 65.1 mm centers. R0.9 mounts the received unfused busbar at its confirmed 120.65 mm centers. The 146 × 96 mm enclosure, relocated lid posts, and cable-backed USB layout are retained from R0.8.
 
+## USB-PD carrier
+
+- The R0.9 body is unchanged.
+- A 114 × 30 × 2.4 mm removable carrier mounts under the R0.10 lid.
+- Four blind 4.6 mm M3 insert pilots are arranged on 106 × 22 mm centers.
+- Each open-ended bay accepts a 45.72 × 17.78 mm envelope, including the reported solder projection.
+- Board centers are X = −27 mm and +27 mm, Y = +25 mm.
+- The battery PD sink/trigger occupies the left bay; the Starlink PD source occupies the right bay.
+- Two zip ties retain each card without assuming a PCB mounting-hole pattern.
+- With a conservative 8 mm total card/component depth, automated validation reports 4.84 mm vertical clearance above the unfused-busbar cover.
+
 ## Material and printing
 
 - Printer target: Prusa CORE One
@@ -101,7 +112,7 @@ No CAP seal or insignia is included.
 
 ## Validation
 
-R0.9 passed automated checks for:
+R0.10 passed automated checks for:
 
 - watertight STL and 3MF meshes
 - consistent mesh winding and positive volume
@@ -111,5 +122,7 @@ R0.9 passed automated checks for:
 - exact 146 × 96 × 52 mm body envelope
 - zero body/lid intersection when assembled
 - zero conservative-envelope intersection between either power block and the body or the other block
+- zero installed-carrier intersection with the body or either power block
+- zero conservative PD-card-envelope intersection with the body or either power block
 
 Automated validation does not replace physical fit, load, thermal, vibration, restraint, or electrical testing.
