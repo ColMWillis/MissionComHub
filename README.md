@@ -2,13 +2,13 @@
 
 **Branding:** Mission Communications Hub / Mk I / GAWG CAP
 
-**Current mechanical revision:** R0.11 tall swapped-block body
+**Current mechanical revision:** R0.12 side-by-side PD carrier and matching lid
 
 MissionComHub is an experimental portable power-interface enclosure for a Peplink MAX BR1 Pro 5G and Starlink Mini using an Anker SOLIX C200 DC or equivalent USB-C PD source. It is designed for temporary CAP aircraft, ground-vehicle, and mission-base use.
 
-![Mission Communications Hub R0.11 preview](images/R0.11_preview.png)
+![Mission Communications Hub R0.12 preview](images/R0.12_preview.png)
 
-## R0.11 configuration
+## R0.12 configuration
 
 - 146 × 96 × 103 mm PETG-CF body
 - Separate 4 mm serviceable lid with locating lip and raised branding
@@ -28,8 +28,10 @@ MissionComHub is an experimental portable power-interface enclosure for a Peplin
 - Blue Sea 5045 fused-block riser coupon
 - Full-envelope unfused-busbar riser coupon with fixed 120.65 mm centers
 - Final engraved USB-C coupon at 18.55 mm centers
-- Revised lid with four blind M3 insert bosses
-- Removable 114 × 30 mm carrier for two USB-PD cards
+- Revised lid with a compact four-boss carrier pattern
+- Removable 64 × 54 mm side-by-side carrier for two USB-PD cards
+- Rails moved inward 1 mm per side and raised 2 mm
+- Open USB ends plus 20 mm power-wire service zones at the screw terminals
 - Open-ended card guides and two zip ties per card
 - Documented battery-input and Starlink-output card placement under the lid
 - Blue Sea 5045 moved to the I/O half
@@ -37,18 +39,18 @@ MissionComHub is an experimental portable power-interface enclosure for a Peplin
 - Switch, voltmeter, and USB-C interfaces raised to a 77 mm centerline
 - Explicit clearance validation for the switch’s measured 38.10 mm inward depth
 
-R0.11 replaces the R0.9/R0.10 body after the physical switch was found to project 38.10 mm inward and collide with the fused block. The body gains 51 mm of height, the two power blocks exchange sides, and the control/USB interfaces move into the new upper section. The R0.10 carrier may be reused, but the body and lid must use the R0.11 pair.
+R0.12 reuses the validated R0.11 tall body. It replaces the tandem carrier and lid after physical fitting showed an attached USB plug extending beyond the enclosure and the received boards falling between the original rails.
 
 ## Download and print
 
-- Complete package: [`releases/R0.11/MissionComHub_MkI_Enclosure_R0.11.zip`](releases/R0.11/MissionComHub_MkI_Enclosure_R0.11.zip)
-- 3MF files: [`CAD/3MF/R0.11`](CAD/3MF/R0.11)
-- STL files: [`CAD/STL/R0.11`](CAD/STL/R0.11)
-- STEP files: [`CAD/STEP/R0.11`](CAD/STEP/R0.11)
-- Parametric CadQuery generator: [`CAD/CadQuery/make_mch_mk1_r11.py`](CAD/CadQuery/make_mch_mk1_r11.py)
-- Dimensions, placement map, and validation: [`CAD/Releases/R0.11`](CAD/Releases/R0.11)
+- Complete package: [`releases/R0.12/MissionComHub_MkI_Enclosure_R0.12.zip`](releases/R0.12/MissionComHub_MkI_Enclosure_R0.12.zip)
+- 3MF files: [`CAD/3MF/R0.12`](CAD/3MF/R0.12)
+- STL files: [`CAD/STL/R0.12`](CAD/STL/R0.12)
+- STEP files: [`CAD/STEP/R0.12`](CAD/STEP/R0.12)
+- Parametric CadQuery generator: [`CAD/CadQuery/make_mch_mk1_r12.py`](CAD/CadQuery/make_mch_mk1_r12.py)
+- Dimensions, placement map, and validation: [`CAD/Releases/R0.12`](CAD/Releases/R0.12)
 
-Print the R0.11 body and lid. Reuse the R0.10 carrier and strain-relief clamp if they are already printed.
+Reuse the R0.11 body. Print the R0.12 lid and carrier; the tandem R0.10/R0.11 carrier is obsolete.
 
 ## Suggested prototype settings
 
@@ -63,7 +65,7 @@ The branded lid needs slicer support beneath its center when printed branding-up
 
 ## Validation status
 
-Every R0.11 STL and 3MF is watertight with consistent winding. STEP files re-import as valid solids, STL and 3MF dimensions agree, body/lid interference is 0 mm³, and the switch, carrier, cards, body, and both swapped power blocks pass conservative clearance checks. The lowest control opening is 24.405 mm above the power-block envelopes.
+Every R0.12 STL and 3MF is watertight with consistent winding. STEP files re-import as valid solids. Body/lid, carrier, card, attached USB plug, power-wire service zone, switch, and both power-block checks report zero interference.
 
 ## Repository layout
 

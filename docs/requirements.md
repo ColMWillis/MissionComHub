@@ -1,4 +1,4 @@
-# Mk I R0.11 Tall Swapped-Block Body Requirements
+# Mk I R0.12 Side-by-Side PD Carrier Requirements
 
 Requirement identifiers remain stable. Retired conceptual requirements are preserved and not reassigned.
 
@@ -20,13 +20,20 @@ Requirement identifiers remain stable. Retired conceptual requirements are prese
 - MCH-M-014: The Blue Sea 5045 and unfused busbar shall each have a printable mounting-fit coupon.
 - MCH-M-015: The unfused busbar shall mount at the physically confirmed 120.65 mm centers.
 - MCH-M-016: The covered unfused busbar and Blue Sea 5045 envelopes shall not intersect the body or each other above their mounting risers.
-- MCH-M-017: A removable lid-mounted carrier shall retain two 45.72 × 17.78 mm USB-PD card envelopes.
-- MCH-M-018: The carrier shall use four M3 fasteners into blind lid bosses and remain reusable from R0.10.
+- MCH-M-017: A removable lid-mounted carrier shall retain two side-by-side 45.72 × 17.78 mm USB-PD card envelopes.
+- MCH-M-018: The carrier shall use four M3 fasteners into blind lid bosses on 58 × 42 mm centers.
 - MCH-M-019: Each PD card shall use two independent zip-tie retention points.
 - MCH-M-020: Conservative 8 mm-deep PD-card envelopes shall not intersect the body, fused block, or unfused busbar.
 - MCH-M-021: The Blue Sea 5045 shall occupy the I/O half and the unfused busbar shall occupy the control half.
 - MCH-M-022: The switch, voltmeter, and USB-C interface centerline shall be 77 mm above the base.
 - MCH-M-023: A 38.10 mm-deep switch envelope shall not intersect either conservative power-block envelope.
+- MCH-M-024: Both USB-C sockets shall point toward +X and retain attached-plug clearance inside the enclosure.
+- MCH-M-025: Both screw-terminal ends shall remain open with at least 20 mm of wire-service space.
+- MCH-M-026: Carrier rails shall be 3.6 mm high and moved inward 1 mm per side relative to R0.11.
+
+## Deferred Mk II requirement
+
+- MCH-MKII-M-001: The lid shall remain mechanically captive to the body when its service screws are removed. A hinge, tether, or equivalent restraint shall support the lid so the wiring harness never acts as the lid restraint.
 
 ## Printing and release
 

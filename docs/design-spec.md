@@ -1,10 +1,10 @@
-# Mechanical Design Specification — Mk I R0.11 Tall Swapped-Block Body
+# Mechanical Design Specification — Mk I R0.12 Side-by-Side PD Carrier
 
 ## Identification and scope
 
 - Product: Mission Communications Hub
 - Marking: `Mission Communications Hub / Mk I / GAWG CAP`
-- Revision: R0.11 tall swapped-block body
+- Revision: R0.12 side-by-side PD carrier and matching lid
 - Function: portable power-interface enclosure for Peplink MAX BR1 Pro 5G and Starlink Mini
 - External source: Anker SOLIX C200 DC or equivalent USB-C PD source
 
@@ -80,14 +80,15 @@ R0.11 places the Blue Sea 5045 at Y=+22.1 mm in the I/O half and the unfused bus
 
 ## USB-PD carrier
 
-- The carrier geometry is unchanged from R0.10 and may be reused.
-- A 114 × 30 × 2.4 mm removable carrier mounts under the R0.11 lid.
-- Four blind 4.6 mm M3 insert pilots are arranged on 106 × 22 mm centers.
-- Each open-ended bay accepts a 45.72 × 17.78 mm envelope, including the reported solder projection.
-- Board centers are X = −27 mm and +27 mm, Y = +25 mm.
-- The battery PD sink/trigger occupies the left bay; the Starlink PD source occupies the right bay.
+- A 64 × 54 × 2.4 mm removable carrier mounts under the R0.12 lid.
+- Four blind 4.6 mm M3 insert pilots are arranged on 58 × 42 mm centers.
+- Two side-by-side, open-ended bays accept 45.72 × 17.78 mm card envelopes.
+- Board centers are X = 0 mm at Y = +4.5 mm and +29.5 mm.
+- Both USB-C sockets point toward +X; both screw-terminal ends point toward −X.
+- The guide rails move inward 1 mm per side and rise from 1.6 to 3.6 mm.
+- Each terminal end retains a 20 mm wire-service and bend zone.
 - Two zip ties retain each card without assuming a PCB mounting-hole pattern.
-- With a conservative 8 mm total card/component depth, automated validation reports 48.70 mm vertical clearance above the taller power-block envelope.
+- The R0.11 tall body is reusable; the R0.10/R0.11 tandem carrier is not.
 
 ## Material and printing
 

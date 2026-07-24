@@ -4,6 +4,17 @@
 
 - Full mechanical assembly, wiring, thermal, load, and restraint testing of the R0.11 tall-body configuration.
 
+## [R0.12] — 2026-07-24
+
+- Replaced the tandem PD-card carrier with a 64 × 54 mm side-by-side carrier.
+- Oriented both USB-C sockets toward +X so attached cables remain within the enclosure.
+- Moved guide rails inward 1 mm per side and raised them from 1.6 to 3.6 mm.
+- Kept both screw-terminal ends open and validated 20 mm power-wire service zones.
+- Refactored the lid to the compact 58 × 42 mm carrier mounting pattern.
+- Reused the validated R0.11 tall body.
+- Added a deferred Mk II requirement for a captive/hinged lid restraint independent of the wiring.
+- Validated zero interference for the body, lid, carrier, cards, attached USB plugs, wire-service envelopes, switch, fused block, and bus bar.
+
 ## [R0.11] — 2026-07-23
 
 ### Switch-clearance correction

@@ -1,4 +1,4 @@
-# Assembly Guide — Mk I R0.11 Tall Swapped-Block Body
+# Assembly Guide — Mk I R0.12 Side-by-Side PD Carrier
 
 ## 1. Print and verify coupons
 
@@ -19,14 +19,14 @@ Do not use the R0.9/R0.10 body for the final hardware layout. Its lower controls
 - Print the body upright.
 - Print the clamp flat.
 - Print the lid branding-up with support under the broad center panel, or trial a long-edge orientation with a brim.
-- Reuse an R0.10 USB-PD carrier if already printed; otherwise print the R0.11 carrier with its guide rails upward.
+- Reuse the R0.11 tall body. Print the R0.12 lid and carrier with the carrier guide rails upward.
 - Inspect every screw boss, cable-contact edge, panel recess, and locating lip before assembly.
 
 ## 3. Install threaded hardware
 
 1. Prove the selected M3 heat-set insert pilot on scrap PETG-CF.
 2. Install the four enclosure-lid inserts square to the boss faces.
-3. Install four additional M3 inserts into the blind USB-PD carrier bosses under the R0.11 lid.
+3. Install four additional M3 inserts into the blind USB-PD carrier bosses under the R0.12 lid.
 4. Stop the carrier inserts flush with the boss bottoms; do not force them toward the branded surface.
 5. Install the two strain-relief inserts using the verified method.
 6. Verify the chosen Blue Sea 5045 mounting method before modifying the 3.6 mm pilots.
@@ -40,11 +40,12 @@ Allow inserts to cool before installing screws.
 3. Route the Peplink bonded pair through its exit.
 4. Fit the printed clamp with its 4.55 × 2.70 mm channel and tighten only enough to prevent movement; do not flatten or cut the insulation.
 5. Place the Blue Sea 5045 on the I/O-side 65.1 mm mounting centers.
-6. Install the battery-input PD sink/trigger card in the carrier's left bay with two small zip ties.
-7. Install the Starlink-output PD source card in the right bay with two small zip ties.
-8. Attach the populated carrier to the lid's four blind bosses with M3 screws that do not bottom in the inserts.
-9. Route dummy cable through the body tie-downs and leave enough service loop to raise the lid.
-10. Install the unfused busbar on the control-side 120.65 mm bosses and verify the cover clears the body, relocated lid posts, central cable channel, and populated carrier.
+6. Install the battery-input PD sink/trigger card in the lower-Y bay with its USB-C socket toward +X.
+7. Install the Starlink-output PD source card in the upper-Y bay with its USB-C socket toward +X.
+8. Preserve at least 20 mm of unobstructed service space beyond both screw-terminal ends.
+9. Attach the populated carrier to the lid's four blind bosses with M3 screws that do not bottom in the inserts.
+10. Route dummy cable through the body tie-downs and leave enough service loop to raise the lid.
+11. Install the unfused busbar on the control-side 120.65 mm bosses and verify the cover clears the body, relocated lid posts, central cable channel, and populated carrier.
 
 ## 5. Lid fit
 
